@@ -2,17 +2,13 @@
 fetch('nyc-sales.json')
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Terjadi Kesalahan Respon Jaringan');
         }
         return response.json();
     })
     .then(dataArray => {
-        // Pastikan kode untuk memproses dataArray berada di sini
         const container = document.getElementById('data-container');
-        
-        // Asumsikan kita hanya ingin menampilkan item pertama dari array sebagai contoh
-        const item = dataArray[0]; // Mengakses item pertama
-
+        const item = dataArray[0];
         // Membuat elemen tabel dan thead
         const table = document.createElement('table');
         const thead = document.createElement('thead');
@@ -26,7 +22,6 @@ fetch('nyc-sales.json')
                 <th>LOT</th>
             </tr>`;
         table.appendChild(thead);
-
         // Membuat elemen tbody
         const tbody = document.createElement('tbody');
         tbody.innerHTML = `
@@ -39,10 +34,9 @@ fetch('nyc-sales.json')
                 <td>${item.LOT}</td>
             </tr>`;
         table.appendChild(tbody);
-
         // Menambahkan tabel ke dalam container
         container.appendChild(table);
     })
     .catch(error => {
-        console.error('There was a problem with fetching the JSON:', error);
+        console.error('Error mengambil data dari JSON:', error);
     });

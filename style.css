@@ -10,35 +10,34 @@
 }
 
 /* tabel */
-/* Mengatur tampilan keseluruhan tabel */
 table {
-    width: 100%; /* Mengatur lebar tabel menjadi penuh */
-    border-collapse: collapse; /* Menghilangkan jarak antar sel */
-    margin-top: 20px; /* Memberikan jarak atas */
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
 }
 
 /* Mengatur tampilan header tabel */
 th {
-    background-color: #4CAF50; /* Warna latar belakang */
-    color: white; /* Warna teks */
-    text-align: left; /* Posisi teks */
-    padding: 8px; /* Padding di dalam sel */
+    background-color: #4CAF50; 
+    color: white; 
+    text-align: left; 
+    padding: 8px; 
 }
 
 /* Mengatur tampilan baris tabel */
 td {
     border: 1px solid #ddd; /* Border sel */
-    padding: 8px; /* Padding di dalam sel */
+    padding: 8px; 
 }
 
 /* Memberikan warna bergantian untuk baris tabel */
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Warna latar belakang untuk baris genap */
+    background-color: #f2f2f2; 
 }
 
 /* Mengatur hover efek pada baris tabel */
 tr:hover {
-    background-color: #ddd; /* Warna latar belakang saat di-hover */
+    background-color: #ddd; 
 }
 
 /* Membuat teks di dalam sel menjadi rata kiri */
