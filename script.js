@@ -1,45 +1,47 @@
 // Memuat file JSON
 fetch('nyc-sales.json')
     .then(response => {
-        // Pastikan untuk menangani respons yang tidak berhasil
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         return response.json();
     })
     .then(dataArray => {
-        // Menampilkan data di halaman HTML
+        // Pastikan kode untuk memproses dataArray berada di sini
         const container = document.getElementById('data-container');
+        
+        // Asumsikan kita hanya ingin menampilkan item pertama dari array sebagai contoh
+        const item = dataArray[0]; // Mengakses item pertama
 
-        // Menggunakan forEach untuk iterasi melalui setiap objek dalam array
-        dataArray.forEach(item => {
-            // Membuat elemen div untuk setiap properti
-            const propertyDiv = document.createElement('div');
-            propertyDiv.innerHTML = `
-                <p>BOROUGH: ${item.BOROUGH}</p>
-                <p>NEIGHBORHOOD: ${item.NEIGHBORHOOD}</p>
-                <p>BUILDING CLASS CATEGORY: ${item.BUILDING_CLASS_CATEGORY}</p>
-                <p>TAX CLASS AT PRESENT: ${item.TAX_CLASS_AT_PRESENT}</p>
-                <p>BLOCK: ${item.BLOCK}</p>
-                <p>LOT: ${item.LOT}</p>
-                <p>BUILDING CLASS AT PRESENT: ${item.BUILDING_CLASS_AT_PRESENT}</p>
-                <p>ADDRESS: ${item.ADDRESS}</p>
-                <p>ZIP CODE: ${item.ZIP_CODE}</p>
-                <p>RESIDENTIAL UNITS: ${item.RESIDENTIAL_UNITS}</p>
-                <p>COMMERCIAL UNITS: ${item.COMMERCIAL_UNITS}</p>
-                <p>TOTAL UNITS: ${item.TOTAL_UNITS}</p>
-                <p>LAND SQUARE FEET: ${item.LAND_SQUARE_FEET}</p>
-                <p>GROSS SQUARE FEET: ${item.GROSS_SQUARE_FEET}</p>
-                <p>YEAR BUILT: ${item.YEAR_BUILT}</p>
-                <p>TAX CLASS AT TIME OF SALE: ${item.TAX_CLASS_AT_TIME_OF_SALE}</p>
-                <p>BUILDING CLASS AT TIME OF SALE: ${item.BUILDING_CLASS_AT_TIME_OF_SALE}</p>
-                <p>SALE PRICE: ${item.SALE_PRICE}</p>
-                <p>YEAR: ${item.YEAR}</p>
-                <p>MONTH: ${item.MONTH}</p>
-                <p>BUILDING TYPE: ${item.BUILDING_TYPE}</p>
-                <hr>`;
-            container.appendChild(propertyDiv);
-        });
+        // Membuat elemen tabel dan thead
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        thead.innerHTML = `
+            <tr>
+                <th>BOROUGH</th>
+                <th>NEIGHBORHOOD</th>
+                <th>BUILDING CLASS CATEGORY</th>
+                <th>TAX CLASS AT PRESENT</th>
+                <th>BLOCK</th>
+                <th>LOT</th>
+            </tr>`;
+        table.appendChild(thead);
+
+        // Membuat elemen tbody
+        const tbody = document.createElement('tbody');
+        tbody.innerHTML = `
+            <tr>
+                <td>${item.BOROUGH}</td>
+                <td>${item.NEIGHBORHOOD}</td>
+                <td>${item.BUILDING_CLASS_CATEGORY}</td>
+                <td>${item.TAX_CLASS_AT_PRESENT}</td>
+                <td>${item.BLOCK}</td>
+                <td>${item.LOT}</td>
+            </tr>`;
+        table.appendChild(tbody);
+
+        // Menambahkan tabel ke dalam container
+        container.appendChild(table);
     })
     .catch(error => {
         console.error('There was a problem with fetching the JSON:', error);
