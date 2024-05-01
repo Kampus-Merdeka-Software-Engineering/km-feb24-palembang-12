@@ -1,42 +1,43 @@
-// Memuat file JSON
-fetch('nyc-sales.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Terjadi Kesalahan Respon Jaringan');
+document.addEventListener("DOMContentLoaded", async () => {
+  const table = document.querySelector(".nyc-sales");
+  // Memuat file JSON
+  fetch("nyc-sales.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Terjadi Kesalahan Respon Jaringan");
+      }
+      return response.json();
+    })
+    .then((dataArray) => {
+      const tbody = document.querySelector(".nyc-sales tbody");
+      // check if data is not empty
+      if (dataArray.length > 0) {
+        let row = "";
+        const startIndex = 0;
+        const endIndex = 10;
+
+        // menampilkan 10 data pertama
+        for (let i = startIndex; i < endIndex; i++) {
+          const item = dataArray[i];
+          row += `
+      <tr>
+          <td id="no"></td>
+          <td>${parseInt(item.BOROUGH)}</td>
+          <td>${item.NEIGHBORHOOD}</td>
+          <td>${item.BUILDING_CLASS_CATEGORY}</td>
+          <td>${parseInt(item.TAX_CLASS_AT_PRESENT)}</td>
+          <td>${parseInt(item.BLOCK)}</td>
+          <td>${parseInt(item.LOT)}</td>
+      </tr>`;
+          tbody.innerHTML = row;
         }
-        return response.json();
+      } else {
+        // menampilkan "No Data Found" jika data empty
+        tbody.innerHTML = `<tr><td colspan = 7><h3 class="text-center">No Data Found</h3></td>`;
+      }
     })
-    .then(dataArray => {
-        const container = document.getElementById('data-container');
-        const item = dataArray[0];
-        // Membuat elemen tabel dan thead
-        const table = document.createElement('table');
-        const thead = document.createElement('thead');
-        thead.innerHTML = `
-            <tr>
-                <th>BOROUGH</th>
-                <th>NEIGHBORHOOD</th>
-                <th>BUILDING CLASS CATEGORY</th>
-                <th>TAX CLASS AT PRESENT</th>
-                <th>BLOCK</th>
-                <th>LOT</th>
-            </tr>`;
-        table.appendChild(thead);
-        // Membuat elemen tbody
-        const tbody = document.createElement('tbody');
-        tbody.innerHTML = `
-            <tr>
-                <td>${item.BOROUGH}</td>
-                <td>${item.NEIGHBORHOOD}</td>
-                <td>${item.BUILDING_CLASS_CATEGORY}</td>
-                <td>${item.TAX_CLASS_AT_PRESENT}</td>
-                <td>${item.BLOCK}</td>
-                <td>${item.LOT}</td>
-            </tr>`;
-        table.appendChild(tbody);
-        // Menambahkan tabel ke dalam container
-        container.appendChild(table);
-    })
-    .catch(error => {
-        console.error('Error mengambil data dari JSON:', error);
+    .catch((error) => {
+      console.error("Error mengambil data dari JSON:", error);
+      table.style.display = "none";
     });
+});
