@@ -2,14 +2,10 @@
 
 :root {
   counter-reset: no;
-
   --primary-font: "Open Sans", sans-serif;
 }
 
 /* utility classes */
-.text-center {
-  text-align: center;
-}
 
 * {
   margin: 0;
@@ -175,7 +171,7 @@ margin : 50px
 }
 
 .hero-image {
-  background-image: url('path-to-your-image.jpg'); /* Replace with your image path */
+  background-image: url('path-to-your-image.jpg');
   background-size: cover;
   width: 50%;
 }
