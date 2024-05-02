@@ -9,20 +9,42 @@
 
   <!-- body section -->
   <body>
-    <!-- header section -->
-    <div class="header">
-      <h1>Palembang-12</h1>
+    <!--  navbar section -->
+    <div class="navbarContainer">
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-water"></i>NYC
+      </div>
+      <ul>
+        <li>Home</li>
+        <li>Dashboard</li>
+        <li>Unit</li>
+        <li>Sales</li>
+        <li>Our Team</li>
+      </ul>
+      <button class="button">Contact Us</button>
     </div>
+  </div>
+    <!-- end navbar section-->
+    <!-- header section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Welcome</h1>
+        <h2>New York City Property Sales</h2>
+        <p>A year's worth of properties sold on the NYC real estate market</p>
+        <div class="search-box">
+          <input type="text" placeholder="Input your Search">
+          <button>Search</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- Image is added as a background in CSS -->
+      </div>
+    </header>
     <!--end header section  -->
 
-    <!--  navbar section -->
-    <div class="nav">
-      <h1>hello world</h1>
-    </div>
-    <!-- end navbar section-->
-
     <!-- menampilan data di tabel -->
-    <div id="data-container">
+    <!-- <div id="data-container">
       <h2 class="text-center">NYC Properties Sales</h2>
       <table class="nyc-sales">
         <thead>
@@ -38,10 +60,47 @@
         </thead>
         <tbody></tbody>
       </table>
-    </div>
+    </div> -->
     <!-- tutup data di tabel -->
 
-    <div class="section"></div>
+    <div class="section">
+      <div class="dashboard-container">
+        <h1 class="dashboard-title">DASHBOARD</h1>
+        
+        <div class="dropdowns">
+          <select class="dropdown">
+            <option>Building Type</option>
+          </select>
+          
+          <select class="dropdown">
+            <option>Location</option>
+          </select>
+        </div>
+      
+        <div class="stats-container">
+          <div class="stat-box">
+            <h2>Average Sale Price Per Unit</h2>
+            <p>$623,30 rb</p>
+          </div>
+          
+          <div class="stat-box">
+            <h2>Total Sales 2017</h2>
+            <p>$43,05 M</p>
+          </div>
+      
+          <div class="stat-box">
+            <h2>Total Unit</h2>
+            <p>108.394</p>
+          </div>
+      
+          <div class="stat-box">
+            <h2>Total Sales 2018</h2>
+            <p>$51,67 M</p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
