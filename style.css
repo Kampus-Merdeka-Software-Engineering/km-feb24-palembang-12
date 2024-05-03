@@ -110,6 +110,10 @@ margin : 50px
   transition: background-color 0.3s;
   cursor: pointer;
 }
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+}
 .navbar ul li:hover {
   background-color: #ddd;
 }
@@ -262,8 +266,8 @@ margin : 50px
 /* sales section */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
-  grid-gap: 10px; /* Space between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; 
   background-color: whitesmoke;
   padding: 10px;
 }
@@ -276,7 +280,6 @@ margin : 50px
   text-align: center;
 }
 
-/* Additional styles for specific sections, if needed */
 .sales-header {
 font-size: 28px;
 text-align: center;
@@ -285,22 +288,21 @@ margin-bottom: 20px;
 }
 
 .sales-description {
-  grid-column: 1 / span 2; /* Description takes up two columns */
+  grid-column: 1 / span 2; 
 }
 
 .sales-chart {
-  grid-column: 3; /* Chart on the third column */
+  grid-column: 3; 
 }
 
-/* Responsive adjustments for smaller screens if necessary */
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Stack items on small screens */
+    grid-template-columns: 1fr; 
   }
 
   .sales-description,
   .sales-chart {
-    grid-column: auto; /* Reset to default spanning */
+    grid-column: auto; 
   }
 }
 
