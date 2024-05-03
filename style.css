@@ -171,7 +171,7 @@ margin : 50px
 }
 
 .hero-image {
-  background-image: url('path-to-your-image.jpg');
+  background-image: url('./assets/hero-logo.png');
   background-size: cover;
   width: 50%;
 }
