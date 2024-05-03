@@ -90,7 +90,7 @@ margin : 50px
   align-items: center;
 }
 .navbar .logo i {
-  font-family: Poppins, sans-serif
+  font-family: Poppins, sans-serif;
   font-size: 28px;
   margin-right: 10px;
 }
@@ -226,7 +226,6 @@ margin : 50px
 }
 
 .stat-box h2 {
-
   font-size: 28;
 }
 
@@ -234,3 +233,62 @@ margin : 50px
   font-size: 28;
 }
 /* end dashboard section */
+
+/* unit section */
+
+/* end unit section */
+
+/* sales section */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+  grid-gap: 10px; /* Space between grid items */
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Additional styles for specific sections, if needed */
+.sales-header {
+font-size: 28px;
+text-align: center;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.sales-description {
+  grid-column: 1 / span 2; /* Description takes up two columns */
+}
+
+.sales-chart {
+  grid-column: 3; /* Chart on the third column */
+}
+
+/* Responsive adjustments for smaller screens if necessary */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+
+  .sales-description,
+  .sales-chart {
+    grid-column: auto; /* Reset to default spanning */
+  }
+}
+
+/* end sales section */
+
+/* ourteam section */
+
+/* end ourteam section */
+
+/* footer section */
+
+/* end footer section */
