@@ -108,6 +108,7 @@ margin : 50px
   padding: 8px 16px;
   border-radius: 18px;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 .navbar ul li:hover {
   background-color: #ddd;
@@ -180,6 +181,18 @@ margin : 50px
   width: 50%;
   height: 617px;
 }
+
+.contact .button {
+  padding: 10px 20px;
+  border-radius: 18px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact .button:hover {
+  background-color: #ccc;
+}
 /* end header section */
 
 /* dashboard section */
@@ -251,7 +264,7 @@ margin : 50px
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
   grid-gap: 10px; /* Space between grid items */
-  background-color: #2196F3;
+  background-color: whitesmoke;
   padding: 10px;
 }
 
