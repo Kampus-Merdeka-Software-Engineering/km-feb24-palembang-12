@@ -14,6 +14,10 @@
   font-family: var(--primary-font);
 }
 
+.container{
+  margin: 50px;
+}
+
 .header h1 {
   text-align: center;
   color: red;
@@ -133,7 +137,7 @@ margin : 50px
   padding: 20px;
   color: white;
   margin: 50px;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .hero-content h1 {
@@ -172,8 +176,9 @@ margin : 50px
 
 .hero-image {
   background-image: url('./assets/hero-logo.png');
-  background-size: cover;
+  background-size: fixed;
   width: 50%;
+  height: 617px;
 }
 /* end header section */
 
@@ -200,7 +205,7 @@ margin : 50px
   border: solid 1px #000;
   padding: 20px;
   margin: 10px;
-  width: calc(50% - 40px);
+  width: calc(50% - 30px);
   background-color: var(--Primary, #DBE2EF);
   text-align: center;
   font-weight: semi-bold;
@@ -214,6 +219,9 @@ margin : 50px
   border: solid 1px #000;
   justify-content: space-around;
   background-color: var(--Primary, #DBE2EF);
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .stat-box {
