@@ -29,6 +29,13 @@
   padding: 0 30px;
 }
 
+section header {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
 /* tabel */
 table {
   width: 100%;
@@ -220,11 +227,6 @@ th {
   margin: 50px;
 }
 
-.dashboard-title {
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
 .dropdowns {
   display: flex;
   justify-content: center;
@@ -276,9 +278,6 @@ th {
 /* end dashboard section */
 
 /* unit section */
-.unit-header {
-  text-align: center;
-}
 
 .unit-group {
   display: flex;
@@ -325,13 +324,6 @@ th {
   padding: 20px;
   font-size: 30px;
   text-align: center;
-}
-
-.sales-header {
-  font-size: 28px;
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 20px;
 }
 
 .sales-description {
