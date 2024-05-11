@@ -121,7 +121,9 @@ th {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 10px 20px;
+  border-radius: inherit;
+  background-color: #fff;
 }
 
 .navbar ul li {
@@ -164,7 +166,7 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a73e8;
+  background: linear-gradient(to bottom, var(--secondary-color), #000);
   padding: 20px;
   color: white;
   margin: 50px;
@@ -382,7 +384,7 @@ th {
     }
 
     .item-header {
-      padding-right: 40px;
+      padding-right: 60px;
     }
 
     .item-header h1 {
