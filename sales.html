@@ -32,15 +32,13 @@
         <br>    
         <p>Ini menunjukkan bahwa target penjualan untuk tahun 2018 mengalami peningkatan sebesar $4,5 juta dari tahun sebelumnya (2017), yang mencerminkan pertumbuhan yang diharapkan dalam bisnis. Hal ini menandakan bahwa manajemen memiliki harapan optimis terhadap pertumbuhan penjualan di lokasi Manhattan pada tahun 2018.</p>     
         </div>
-        <div class="div2"> 
+        <div class="div2">
+            <h2>TREND SALES 2016-2017</h2> 
             <canvas id="trendSales"></canvas>
         </div>
         <div class="div3">
-            <h2>SALES TARGET 2018</h>
+            <h2>SALES TARGET 2018</h2>
             <canvas id="salesTarget"></canvas>     
-        </div>
-        <div class="div4"> 
-            <h1>test</h1>
         </div>
         </div>
     </div>
@@ -60,24 +58,84 @@ fetch("./json/trend_sales_2016-2017.json")
     }
     return response.json();
   })
-  const trend = document.getElementById('trendSales');
-  const Utils = {
-  months: function({ count }) {
-    const monthNames = ["Sep","Okt","Nov","Des","Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    return monthNames.slice(0, count);}};
-  const label = Utils.months({count: 12});
-  new Chart(trend, {
-    type: 'line',
-    data: {
-        labels: label,
-        datasets: [{
-        label: 'TREND SALES 2016-2017',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    }
+  .then((data) => {
+    console.log(data);
+    const trend = document.getElementById('trendSales');
+    const month = data.map(item => item.SALE_DATE);
+    const unit = data.map(item => item.Total_Units);
+    const sales = data.map(item => item.Total_Sale_Price);
+    console.log(sales)
+    new Chart(trend, {
+      type: 'line',
+      data: {
+        labels: month,
+        datasets: [
+          {
+            label: 'Total Units',
+            data: unit,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            yAxisID: 'y-axis-1',
+          },
+          {
+            label: 'Total Sales',
+            data: sales,
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+            yAxisID: 'y-axis-2',
+          }
+        ]
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              id: 'y-axis-1',
+              type: 'linear',
+              position: 'left',
+              ticks: {
+                beginAtZero: true,
+              }
+            },
+            {
+              id: 'y-axis-2',
+              type: 'linear',
+              position: 'right',
+              
+              ticks: {
+                beginAtZero: true,
+                callback: function(value, index, values) {
+                  return '$' + value.toFixed(2);
+                }
+              },
+              gridLines: {
+                drawOnChartArea: false,
+              },
+            }
+          ]
+        },
+        title: {
+          display: true,
+          text: 'TREND SALES 2016 - 2017'
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false,
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        }
+      }
+    });
+  })
+  .catch((error) => {
+    console.error('Fetch error:', error);
   });
 
+    
 // total sales 2018 chart
   fetch("./json/sales_target_2018")
   .then((response) => {
