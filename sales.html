@@ -45,8 +45,6 @@
         </div>
     </div>
 </section>
-
-
   <!-- end main content -->
 
 
@@ -54,6 +52,14 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+// trend sales 2016-2017
+fetch("./json/trend_sales_2016-2017.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Terjadi Kesalahan Respon Jaringan");
+    }
+    return response.json();
+  })
   const trend = document.getElementById('trendSales');
   const Utils = {
   months: function({ count }) {
@@ -63,12 +69,9 @@
   new Chart(trend, {
     type: 'line',
     data: {
-        // month
         labels: label,
-    //   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], 
-      datasets: [{
+        datasets: [{
         label: 'TREND SALES 2016-2017',
-        // json
         data: [12, 19, 3, 5, 2, 3],
         borderWidth: 1
       }]
@@ -76,7 +79,7 @@
   });
 
 // total sales 2018 chart
-  fetch("sales_target_2018")
+  fetch("./json/sales_target_2018")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Terjadi Kesalahan Respon Jaringan");
@@ -84,7 +87,7 @@
     return response.json();
   })
   .then((data) => {
-    console.log(data);
+    // console.log(data);
     const locations = data.map(item => item.LOCATION);
     const totalSales2016 = data.map(item => item["TOTAL_SALES_2016"]);
     const totalSales2017 = data.map(item => item["TOTAL_SALES_2017"]);
@@ -95,25 +98,25 @@
       new Chart(salestarget, {
         type: 'bar',
         data: {
-            labels: locations, // Array of locations as labels
+            labels: locations,
             datasets: [
               {
                 label: 'Total Sales 2016',
-                data: totalSales2016, // Array of total sales for 2016
+                data: totalSales2016,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgba(255,99,132,1)',
                 borderWidth: 1
               },
               {
                 label: 'Total Sales 2017',
-                data: totalSales2017, // Array of total sales for 2017
+                data: totalSales2017,
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
               },
               {
                 label: 'Sales Target 2018',
-                data: salesTarget2018, // Array of sales target for 2018
+                data: salesTarget2018,
                 backgroundColor: 'rgba(255, 206, 86, 0.2)',
                 borderColor: 'rgba(255, 206, 86, 1)',
                 borderWidth: 1
@@ -126,7 +129,7 @@
               ticks: {
                 beginAtZero: true,
                 callback: function(value) {
-                  return value.toLocaleString(); // Format numbers with thousand separators
+                  return value.toLocaleString();
                 }
               }
             }]
@@ -148,8 +151,6 @@
   .catch((error) => {
       console.error('Fetch error:', error);
   });
-
-
 </script>  
 </body>
 </html>
