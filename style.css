@@ -423,6 +423,45 @@ th {
 /* end sales section */
 
 /* ourteam section */
+.ourteam-group {
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  .ourteam-item:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    & button {
+      padding: 10px 20px;
+      border-radius: 18px;
+      border: none;
+      background-color: var(--primary-color);
+      font-weight: bold;
+    }
+
+
+  }
+
+  .ourteam-item:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .feature {
+      width: 300px;
+      text-align: center;
+    }
+
+    .feature>* {
+      margin-top: .5rem;
+    }
+  }
+}
 
 /* end ourteam section */
 
