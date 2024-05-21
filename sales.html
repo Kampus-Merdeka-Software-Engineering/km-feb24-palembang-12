@@ -6,6 +6,7 @@
     <title>Sales Page</title>
     <link rel="stylesheet" href="/Component/navbar.css">
     <link rel="stylesheet" href="sales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js">
 </head>
 <body>
     <div id="navbar"></div>
@@ -32,10 +33,11 @@
         <p>Ini menunjukkan bahwa target penjualan untuk tahun 2018 mengalami peningkatan sebesar $4,5 juta dari tahun sebelumnya (2017), yang mencerminkan pertumbuhan yang diharapkan dalam bisnis. Hal ini menandakan bahwa manajemen memiliki harapan optimis terhadap pertumbuhan penjualan di lokasi Manhattan pada tahun 2018.</p>     
         </div>
         <div class="div2"> 
-            <h1>test div 2</h1>
+            <canvas id="trendSales"></canvas>
         </div>
         <div class="div3">
-        <h1>test</h1>     
+            <h2>SALES TARGET 2018</h>
+            <canvas id="salesTarget"></canvas>     
         </div>
         <div class="div4"> 
             <h1>test</h1>
@@ -48,6 +50,106 @@
   <!-- end main content -->
 
 
-<script src="script.js"></script>  
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const trend = document.getElementById('trendSales');
+  const Utils = {
+  months: function({ count }) {
+    const monthNames = ["Sep","Okt","Nov","Des","Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return monthNames.slice(0, count);}};
+  const label = Utils.months({count: 12});
+  new Chart(trend, {
+    type: 'line',
+    data: {
+        // month
+        labels: label,
+    //   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], 
+      datasets: [{
+        label: 'TREND SALES 2016-2017',
+        // json
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    }
+  });
+
+// total sales 2018 chart
+  fetch("sales_target_2018")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Terjadi Kesalahan Respon Jaringan");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    const locations = data.map(item => item.LOCATION);
+    const totalSales2016 = data.map(item => item["TOTAL_SALES_2016"]);
+    const totalSales2017 = data.map(item => item["TOTAL_SALES_2017"]);
+    const salesTarget2018 = data.map(item => item["SALES_TARGET_2018"]);
+    const salestarget = document.getElementById('salesTarget');
+
+    if (salestarget) {
+      new Chart(salestarget, {
+        type: 'bar',
+        data: {
+            labels: locations, // Array of locations as labels
+            datasets: [
+              {
+                label: 'Total Sales 2016',
+                data: totalSales2016, // Array of total sales for 2016
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255,99,132,1)',
+                borderWidth: 1
+              },
+              {
+                label: 'Total Sales 2017',
+                data: totalSales2017, // Array of total sales for 2017
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'Sales Target 2018',
+                data: salesTarget2018, // Array of sales target for 2018
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                borderColor: 'rgba(255, 206, 86, 1)',
+                borderWidth: 1
+              }
+            ]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                callback: function(value) {
+                  return value.toLocaleString(); // Format numbers with thousand separators
+                }
+              }
+            }]
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, chart) {
+                let datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + tooltipItem.yLabel.toLocaleString();
+              }
+            }
+          }
+        }
+      });
+    } else {
+      console.error("Element 'salesTarget' not found in the DOM.");
+    }
+  })
+  .catch((error) => {
+      console.error('Fetch error:', error);
+  });
+
+
+</script>  
 </body>
 </html>
