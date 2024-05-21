@@ -297,7 +297,7 @@ th {
 }
 
 .unit-item {
-  flex: 1 1 260px;
+  flex: 0 1 260px;
   max-width: 460px;
   min-width: 200px;
   height: 100%;
@@ -443,17 +443,17 @@ th {
       background-color: var(--primary-color);
       font-weight: bold;
     }
-
-
   }
 
-  .ourteam-item:nth-of-type(2) {
+  .ourteam-item:last-of-type {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 4rem;
 
     .feature {
-      width: 300px;
+      flex: 0 1 300px;
+      min-width: 260px;
       text-align: center;
     }
 
