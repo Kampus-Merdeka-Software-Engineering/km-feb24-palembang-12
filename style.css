@@ -217,16 +217,14 @@ th {
 
 .unit-group {
   min-height: 360px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin: 0 auto;
 }
 
 .unit-item {
-  flex: 0 1 260px;
-  max-width: 460px;
+  max-width: 400px;
   min-width: 200px;
   height: 100%;
   border-radius: 16px;
