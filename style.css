@@ -34,7 +34,11 @@ li {
 #data-container {
   padding: 0 30px;
 }
-
+body > *{
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
 section header {
   padding: 10px;
   margin-bottom: 20px;
@@ -288,6 +292,7 @@ th {
   display: flex;
   justify-content: center;
   height: 80vh;
+  max-height: 700px;
   border-radius: 15px;
   background-color: var(--secondary-color);
 
