@@ -7,11 +7,13 @@ class Footer extends HTMLElement {
         <h3><span>NYC</span></h3>
   
         <p class="footer-links">
-          <a href="#" class="link-1">Home</a>
+          <a href="index.html" class="link-1">Home</a>
   
-          <a href="#">Location</a>
+          <a href="location.html">Location</a>
   
-          <a href="#">Building Type</a>
+          <a href="buildingType.html">Building Type</a>
+
+          <a href="sales.html">Sales</a>
   
           <a href="#">Our Team</a>
   
