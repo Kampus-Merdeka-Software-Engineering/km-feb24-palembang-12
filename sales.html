@@ -1,214 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Page</title>
-    <link rel="stylesheet" href="/Component/navbar.css">
-    <link rel="stylesheet" href="sales.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js">
-</head>
-<body>
-    <div id="navbar"></div>
-  <!-- header section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Sales</h1>
-      <h2>Looking for 2018 Sales Target</h2>
-    </div>
-    <div class="hero-image">
-      <img src="assets/hero-logo.png">
-    </div>
-  </header>
-  <!--end header section  -->
+    <link rel="stylesheet" href="Component/navbar.css" />
+    <link rel="stylesheet" href="Component/hero.css" />
+    <link rel="stylesheet" href="Component/footer.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="sales.css" />
 
-  <!-- main content area -->
-<section>
-    <div class="container">
-    <div class="parent">
-        <div class="div1">
-        <h1>Sales Target 2018</h1>
-        <p>Dari data penjualan tahun 2016 dan 2017, dapat dilihat bahwa total penjualan untuk lokasi Manhattan adalah $13,7 juta pada tahun 2016 dan $22,8 juta pada tahun 2017. Dengan mempertimbangkan tren pertumbuhan penjualan dari tahun ke tahun, target penjualan untuk tahun 2018 ditetapkan sebesar $27,3 juta.</p>
-        <br>    
-        <p>Ini menunjukkan bahwa target penjualan untuk tahun 2018 mengalami peningkatan sebesar $4,5 juta dari tahun sebelumnya (2017), yang mencerminkan pertumbuhan yang diharapkan dalam bisnis. Hal ini menandakan bahwa manajemen memiliki harapan optimis terhadap pertumbuhan penjualan di lokasi Manhattan pada tahun 2018.</p>     
-        </div>
-        <div class="div2">
-            <h2>TREND SALES 2016-2017</h2> 
-            <canvas id="trendSales"></canvas>
-        </div>
-        <div class="div3">
-            <h2>SALES TARGET 2018</h2>
-            <canvas id="salesTarget"></canvas>     
-        </div>
-        </div>
-    </div>
-</section>
-  <!-- end main content -->
+    <!-- Boxicon CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav-card></nav-card>
+    <!-- header section -->
+    <hero-card
+      name="Sales"
+      title="Looking for 2018 Sales Target"
+      desc=""
+    ></hero-card>
+    <!--end header section  -->
 
+    <!-- main content area -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="parent">
+            <div class="div1">
+              <h1>Sales Target 2018</h1>
+              <p>
+                Dari data penjualan tahun 2016 dan 2017, dapat dilihat bahwa
+                total penjualan untuk lokasi Manhattan adalah $13,7 juta pada
+                tahun 2016 dan $22,8 juta pada tahun 2017. Dengan
+                mempertimbangkan tren pertumbuhan penjualan dari tahun ke tahun,
+                target penjualan untuk tahun 2018 ditetapkan sebesar $27,3 juta.
+              </p>
+              <br />
+              <p>
+                Ini menunjukkan bahwa target penjualan untuk tahun 2018
+                mengalami peningkatan sebesar $4,5 juta dari tahun sebelumnya
+                (2017), yang mencerminkan pertumbuhan yang diharapkan dalam
+                bisnis. Hal ini menandakan bahwa manajemen memiliki harapan
+                optimis terhadap pertumbuhan penjualan di lokasi Manhattan pada
+                tahun 2018.
+              </p>
+            </div>
+            <div class="div2">
+              <h2>TREND SALES 2016-2017</h2>
+              <canvas id="trendSales"></canvas>
+            </div>
+            <div class="div3">
+              <h2>SALES TARGET 2018</h2>
+              <canvas id="salesTarget"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <footer-card></footer-card>
+    <!-- end main content -->
 
-<script>
-// trend sales 2016-2017
-fetch("./json/trend_sales_2016-2017.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Terjadi Kesalahan Respon Jaringan");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-    const trend = document.getElementById('trendSales');
-    const month = data.map(item => item.SALE_DATE);
-    const unit = data.map(item => item.Total_Units);
-    const sales = data.map(item => item.Total_Sale_Price);
-    console.log(sales)
-    new Chart(trend, {
-      type: 'line',
-      data: {
-        labels: month,
-        datasets: [
-          {
-            label: 'Total Units',
-            data: unit,
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255,99,132,1)',
-            borderWidth: 1,
-            yAxisID: 'y-axis-1',
-          },
-          {
-            label: 'Total Sales',
-            data: sales,
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1,
-            yAxisID: 'y-axis-2',
+    <script src="Component/navbar.js"></script>
+    <script src="Component/hero.js"></script>
+    <script src="Component/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // trend sales 2016-2017
+      fetch("./json/trend_sales_2016-2017.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Terjadi Kesalahan Respon Jaringan");
           }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              id: 'y-axis-1',
-              type: 'linear',
-              position: 'left',
-              ticks: {
-                beginAtZero: true,
-              }
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          const trend = document.getElementById("trendSales");
+          const month = data.map((item) => item.SALE_DATE);
+          const unit = data.map((item) => item.Total_Units);
+          const sales = data.map((item) => item.Total_Sale_Price);
+          console.log(sales);
+          new Chart(trend, {
+            type: "line",
+            data: {
+              labels: month,
+              datasets: [
+                {
+                  label: "Total Units",
+                  data: unit,
+                  backgroundColor: "rgba(255, 99, 132, 0.2)",
+                  borderColor: "rgba(255,99,132,1)",
+                  borderWidth: 1,
+                  yAxisID: "y-axis-1",
+                },
+                {
+                  label: "Total Sales",
+                  data: sales,
+                  backgroundColor: "rgba(54, 162, 235, 0.2)",
+                  borderColor: "rgba(54, 162, 235, 1)",
+                  borderWidth: 1,
+                  yAxisID: "y-axis-2",
+                },
+              ],
             },
-            {
-              id: 'y-axis-2',
-              type: 'linear',
-              position: 'right',
-              
-              ticks: {
-                beginAtZero: true,
-                callback: function(value, index, values) {
-                  return '$' + value.toFixed(2);
-                }
-              },
-              gridLines: {
-                drawOnChartArea: false,
-              },
-            }
-          ]
-        },
-        title: {
-          display: true,
-          text: 'TREND SALES 2016 - 2017'
-        },
-        tooltips: {
-          mode: 'index',
-          intersect: false,
-        },
-        hover: {
-          mode: 'nearest',
-          intersect: true
-        }
-      }
-    });
-  })
-  .catch((error) => {
-    console.error('Fetch error:', error);
-  });
+            options: {
+              scales: {
+                yAxes: [
+                  {
+                    id: "y-axis-1",
+                    type: "linear",
+                    position: "left",
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                  },
+                  {
+                    id: "y-axis-2",
+                    type: "linear",
+                    position: "right",
 
-    
-// total sales 2018 chart
-  fetch("./json/sales_target_2018.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Terjadi Kesalahan Respon Jaringan");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    // console.log(data);
-    const locations = data.map(item => item.LOCATION);
-    const totalSales2016 = data.map(item => item["TOTAL_SALES_2016"]);
-    const totalSales2017 = data.map(item => item["TOTAL_SALES_2017"]);
-    const salesTarget2018 = data.map(item => item["SALES_TARGET_2018"]);
-    const salestarget = document.getElementById('salesTarget');
+                    ticks: {
+                      beginAtZero: true,
+                      callback: function (value, index, values) {
+                        return "$" + value.toFixed(2);
+                      },
+                    },
+                    gridLines: {
+                      drawOnChartArea: false,
+                    },
+                  },
+                ],
+              },
+              title: {
+                display: true,
+                text: "TREND SALES 2016 - 2017",
+              },
+              tooltips: {
+                mode: "index",
+                intersect: false,
+              },
+              hover: {
+                mode: "nearest",
+                intersect: true,
+              },
+            },
+          });
+        })
+        .catch((error) => {
+          console.error("Fetch error:", error);
+        });
 
-    if (salestarget) {
-      new Chart(salestarget, {
-        type: 'bar',
-        data: {
-            labels: locations,
-            datasets: [
-              {
-                label: 'Total Sales 2016',
-                data: totalSales2016,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255,99,132,1)',
-                borderWidth: 1
-              },
-              {
-                label: 'Total Sales 2017',
-                data: totalSales2017,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-              },
-              {
-                label: 'Sales Target 2018',
-                data: salesTarget2018,
-                backgroundColor: 'rgba(255, 206, 86, 0.2)',
-                borderColor: 'rgba(255, 206, 86, 1)',
-                borderWidth: 1
-              }
-            ]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                callback: function(value) {
-                  return value.toLocaleString();
-                }
-              }
-            }]
-          },
-          tooltips: {
-            callbacks: {
-              label: function(tooltipItem, chart) {
-                let datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-                return datasetLabel + ': ' + tooltipItem.yLabel.toLocaleString();
-              }
-            }
+      // total sales 2018 chart
+      fetch("./json/sales_target_2018.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Terjadi Kesalahan Respon Jaringan");
           }
-        }
-      });
-    } else {
-      console.error("Element 'salesTarget' not found in the DOM.");
-    }
-  })
-  .catch((error) => {
-      console.error('Fetch error:', error);
-  });
-</script>  
-</body>
+          return response.json();
+        })
+        .then((data) => {
+          // console.log(data);
+          const locations = data.map((item) => item.LOCATION);
+          const totalSales2016 = data.map((item) => item["TOTAL_SALES_2016"]);
+          const totalSales2017 = data.map((item) => item["TOTAL_SALES_2017"]);
+          const salesTarget2018 = data.map((item) => item["SALES_TARGET_2018"]);
+          const salestarget = document.getElementById("salesTarget");
+
+          if (salestarget) {
+            new Chart(salestarget, {
+              type: "bar",
+              data: {
+                labels: locations,
+                datasets: [
+                  {
+                    label: "Total Sales 2016",
+                    data: totalSales2016,
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgba(255,99,132,1)",
+                    borderWidth: 1,
+                  },
+                  {
+                    label: "Total Sales 2017",
+                    data: totalSales2017,
+                    backgroundColor: "rgba(54, 162, 235, 0.2)",
+                    borderColor: "rgba(54, 162, 235, 1)",
+                    borderWidth: 1,
+                  },
+                  {
+                    label: "Sales Target 2018",
+                    data: salesTarget2018,
+                    backgroundColor: "rgba(255, 206, 86, 0.2)",
+                    borderColor: "rgba(255, 206, 86, 1)",
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  yAxes: [
+                    {
+                      ticks: {
+                        beginAtZero: true,
+                        callback: function (value) {
+                          return value.toLocaleString();
+                        },
+                      },
+                    },
+                  ],
+                },
+                tooltips: {
+                  callbacks: {
+                    label: function (tooltipItem, chart) {
+                      let datasetLabel =
+                        chart.datasets[tooltipItem.datasetIndex].label || "";
+                      return (
+                        datasetLabel +
+                        ": " +
+                        tooltipItem.yLabel.toLocaleString()
+                      );
+                    },
+                  },
+                },
+              },
+            });
+          } else {
+            console.error("Element 'salesTarget' not found in the DOM.");
+          }
+        })
+        .catch((error) => {
+          console.error("Fetch error:", error);
+        });
+    </script>
+  </body>
 </html>
