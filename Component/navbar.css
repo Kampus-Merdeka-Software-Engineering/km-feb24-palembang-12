@@ -1,14 +1,10 @@
 /* navbar section */
-.navbarContainer {
-  margin: 50px
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 14px 35px;
-  background-color: var(--Primary, #DBE2EF);
+  background-color: var(--Primary, #dbe2ef);
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +47,7 @@
   background-color: #ddd;
 }
 
-.navbar ul li+li {
+.navbar ul li + li {
   margin-left: 10px;
 }
 
