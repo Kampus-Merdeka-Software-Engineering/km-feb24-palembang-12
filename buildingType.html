@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="buildingType.css" />
     <link rel="stylesheet" href="Component/navbar.css" />
-    <link rel="stylesheet" href="Component/hero.css" />
-    <link rel="stylesheet" href="Component/footer.css" />
 
     <!-- Boxicon CSS -->
     <link
@@ -19,8 +17,10 @@
   </head>
   <body>
     <nav-card></nav-card>
-    <hero-card name="Building Type" title="Homes For You" desc=""></hero-card>
-
+    <hero-card>
+      <div slot="page">Building Type</div>
+      <div slot="title">Homes For You</div>
+    </hero-card>
     <main>
       <section>
         <div class="card-group">
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="card-item">
-            <h1>card 5</h1>
+            
           </div>
           <div class="card">
             <img src="assets/building_types/p18.jpg.png" alt="Property Image">

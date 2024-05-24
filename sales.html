@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Page</title>
     <link rel="stylesheet" href="Component/navbar.css" />
-    <link rel="stylesheet" href="Component/hero.css" />
-    <link rel="stylesheet" href="Component/footer.css" />
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="sales.css" />
 
@@ -19,11 +17,10 @@
   <body>
     <nav-card></nav-card>
     <!-- header section -->
-    <hero-card
-      name="Sales"
-      title="Looking for 2018 Sales Target"
-      desc=""
-    ></hero-card>
+    <hero-card>
+      <div slot="page">Sales</div>
+      <div slot="title">Looking for 2018 Sales Target</div>
+    </hero-card>
     <!--end header section  -->
 
     <!-- main content area -->
