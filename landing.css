@@ -1,7 +1,6 @@
 /* dashboard section */
 .dashboard-container {
   text-align: center;
-  margin: 50px;
 }
 
 .dropdowns {
@@ -52,6 +51,170 @@
 }
 
 /* end dashboard section */
+
+/* Location Section */
+
+.location-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "side brook"
+    "side bronx"
+    "side queens"
+    "side staten"
+    "side manhat";
+  height: 1130px;
+  gap: 10px;
+}
+.location-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h1 {
+    position: absolute;
+    z-index: 99;
+    font-weight: 900;
+    font-size: 90px;
+  }
+}
+.location-item .img-wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.location-item:first-child {
+  grid-area: side;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(219, 226, 239);
+  background: linear-gradient(
+    122deg,
+    rgba(219, 226, 239, 1) 0%,
+    rgba(63, 114, 175, 1) 100%
+  );
+
+  & h1 {
+    font-size: 250px;
+    text-align: center;
+    font-weight: 900;
+    font-stretch: expanded;
+    letter-spacing: -5px;
+    line-height: 250px;
+
+    background-image: url("https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+.location-item:nth-child(2) {
+  grid-area: brook;
+  position: relative;
+
+  .img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.5);
+    pointer-events: none;
+  }
+  .img-wrapper img {
+    filter: grayscale(100%);
+  }
+}
+.location-item:nth-child(3) {
+  grid-area: bronx;
+  position: relative;
+
+  .img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 145, 61, 0.519);
+    pointer-events: none;
+  }
+}
+.location-item:nth-child(4) {
+  grid-area: queens;
+  position: relative;
+
+  .img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      hsl(240 100% 50% / 0.3),
+      hsla(289, 100%, 50%, 0.3)
+    );
+
+    pointer-events: none;
+  }
+}
+.location-item:nth-child(5) {
+  grid-area: staten;
+  position: relative;
+
+  .img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 174, 185, 0.4);
+    pointer-events: none;
+  }
+}
+.location-item:nth-child(6) {
+  grid-area: manhat;
+  position: relative;
+
+  .img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(99, 102, 254, 0.234);
+    pointer-events: none;
+  }
+}
+
+.location-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  & button {
+    padding: 15px 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 1rem;
+  }
+}
+/* end location Section */
 
 /* Building Type Section */
 /* .building {

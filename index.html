@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sec.Palembang-12</title>
     <link rel="stylesheet" href="Component/navbar.css" />
-    <link rel="stylesheet" href="Component/hero.css" />
-    <link rel="stylesheet" href="Component/footer.css" />
+    <!-- <link rel="stylesheet" href="Component/hero.css" />
+    <link rel="stylesheet" href="Component/footer.css" /> -->
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="landing.css" />
 
@@ -26,11 +26,13 @@
     <nav-card></nav-card>
     <!-- end navbar section-->
     <!-- header section -->
-    <hero-card
-      name="Welcome"
-      title="New York City Property Sales"
-      desc="A year's worth of properties sold on the NYC real estate market"
-    ></hero-card>
+    <hero-card>
+      <div slot="page">Welcome</div>
+      <div slot="title">New York City Property Sales</div>
+      <div slot="desc">
+        A year's worth of properties sold on the NYC real estate market
+      </div>
+    </hero-card>
     <!--end header section  -->
 
     <main>
@@ -74,12 +76,64 @@
         </div>
       </section>
 
+      <section>
+        <div class="container">
+          <div class="location">
+            <header class="location-header">
+              <h1>LOCATION</h1>
+              <h3>Find Properties in These City</h3>
+            </header>
+            <div class="location-group">
+              <div class="location-item overlay">
+                <h1>NEW YORK CITY</h1>
+              </div>
+              <div class="location-item">
+                <h1>BROOKLYN</h1>
+                <div class="img-wrapper">
+                  <img src="assets/location/img1.jpg" alt="" />
+                </div>
+              </div>
+              <div class="location-item">
+                <h1>BRONX</h1>
+                <div class="img-wrapper">
+                  <img src="assets/location/img2.jpg" alt="" />
+                </div>
+              </div>
+              <div class="location-item">
+                <h1>QUEEN</h1>
+                <div class="img-wrapper">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1661955570907-c03dae52b089?q=80&w=1778&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="location-item">
+                <h1>STATEN</h1>
+                <div class="img-wrapper">
+                  <img src="assets/location/img5.jpg" alt="" />
+                </div>
+              </div>
+              <div class="location-item">
+                <h1>MANHATTAN</h1>
+                <div class="img-wrapper">
+                  <img src="assets/location/img7.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="location-btn">
+              <button>Watch More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Building Type Section -->
       <section>
         <div class="container">
           <div class="building">
             <header class="building-header">
-              <h1>Building Type</h1>
+              <h1>BUILDING TYPE</h1>
             </header>
             <div class="building-group">
               <div class="building-item">
@@ -292,7 +346,7 @@
 
     <script src="Component/navbar.js"></script>
     <script src="Component/hero.js"></script>
-    <script src="Component/footer2.js"></script>
+    <script src="Component/footer.js"></script>
   </body>
   <!-- end body section -->
 </html>
