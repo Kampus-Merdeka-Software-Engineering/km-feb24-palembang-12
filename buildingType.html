@@ -7,9 +7,6 @@
     <title>Building Type</title>
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="buildingType.css" />
-    <link rel="stylesheet" href="Component/navbar.css" />
-    <link rel="stylesheet" href="Component/hero.css" />
-    <link rel="stylesheet" href="Component/footer.css" />
 
     <!-- Boxicon CSS -->
     <link
@@ -27,7 +24,7 @@
       <section>
         <div class="card-group">
           <div class="card">
-            <img src="assets/building_types/p11.jpg.png" alt="Property Image" />
+            <img src="assets/building_types/p11.png" alt="Property Image" />
 
             <div class="label-sale">FOR SALE</div>
             <div class="label-featured">FEATURED</div>
@@ -39,7 +36,7 @@
             </div>
           </div>
           <div class="card">
-            <img src="assets/building_types/p13.jpg.png" alt="Property Image" />
+            <img src="assets/building_types/p13.png" alt="Property Image" />
 
             <div class="label-sale">FOR SALE</div>
             <div class="label-featured">FEATURED</div>
@@ -51,7 +48,7 @@
             </div>
           </div>
           <div class="card">
-            <img src="assets/building_types/p15.jpg.png" alt="Property Image" />
+            <img src="assets/building_types/p15.png" alt="Property Image" />
 
             <div class="label-sale">FOR SALE</div>
             <div class="label-featured">FEATURED</div>
@@ -63,7 +60,7 @@
             </div>
           </div>
           <div class="card">
-            <img src="assets/building_types/p16.jpg.png" alt="Property Image" />
+            <img src="assets/building_types/p16.png" alt="Property Image" />
 
             <div class="label-sale">FOR SALE</div>
             <div class="label-featured">FEATURED</div>
@@ -76,7 +73,7 @@
           </div>
           <div class="card-item"></div>
           <div class="card">
-            <img src="assets/building_types/p18.jpg.png" alt="Property Image" />
+            <img src="assets/building_types/p18.png" alt="Property Image" />
 
             <div class="label-sale">FOR SALE</div>
             <div class="label-featured">FEATURED</div>
@@ -91,8 +88,28 @@
       </section>
       <section>
         <div class="chart-group">
-          <div class="chart-item">chart1</div>
-          <div class="chart-item">chart1</div>
+          <div class="chart-item chart1">
+            <h2>UNIT RESIDENTIAL AND COMMERCIAL</h2>
+            <canvas id="resdCommUnit"></canvas>
+          </div>
+          <div class="chart-item card1">
+            <div class="building-item">
+              <div class="img-wrapper">
+                <img src="assets/building/residential.png" alt="" />
+              </div>
+              <div class="building-content">
+                <h3>Residential Unit</h3>
+              </div>
+            </div>
+            <div class="building-item">
+              <div class="img-wrapper">
+                <img src="assets/building/commercial.png" alt="" />
+              </div>
+              <div class="building-content">
+                <h3>Commercial Unit</h3>
+              </div>
+            </div>
+          </div>
           <div class="chart-item">chart1</div>
           <div class="chart-item">chart1</div>
           <div class="chart-item">chart1</div>
@@ -101,11 +118,12 @@
     </main>
 
     <footer-card></footer-card>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="Component/hero.js"></script>
     <script src="Component/navbar.js"></script>
     <script src="Component/footer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script></script>
+    <script src="buildingType.js"></script>
   </body>
 </html>
