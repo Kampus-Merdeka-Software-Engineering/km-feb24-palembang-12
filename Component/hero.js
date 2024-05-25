@@ -77,7 +77,7 @@ heroTemplate.innerHTML = `
       </div>
     </div>
     <div class="hero-image">
-      <img src="assets/hero-logo.png" />
+      <img src="../assets/images/hero-logo.png" />
     </div>
   </div>
   </section>

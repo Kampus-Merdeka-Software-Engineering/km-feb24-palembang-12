@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Page</title>
     <link rel="stylesheet" href="Component/navbar.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="stylesheet" href="sales.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sales.css" />
 
     <!-- Boxicon CSS -->
     <link
@@ -70,7 +70,7 @@
 
     <script>
       // trend sales 2016-2017
-      fetch("./json/trend_sales_2016-2017.json")
+      fetch("../data/trend_sales_2016-2017.json")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Terjadi Kesalahan Respon Jaringan");
@@ -155,7 +155,7 @@
         });
 
       // total sales 2018 chart
-      fetch("./json/sales_target_2018.json")
+      fetch("../data/sales_target_2018.json")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Terjadi Kesalahan Respon Jaringan");

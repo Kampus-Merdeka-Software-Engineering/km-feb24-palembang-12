@@ -1,4 +1,4 @@
-fetch("json/residential_commercial_unit.json")
+fetch("../data/residential_commercial_unit.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Terjadi kesalahan respon jaringan");
