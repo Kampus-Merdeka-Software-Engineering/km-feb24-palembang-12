@@ -46,10 +46,17 @@ heroTemplate.innerHTML = `
     }
     
     .hero-image {
-      background-image: url("./assets/hero-logo.png");
+      display: flex;
+      justify-content: flex-end;
       background-size: fixed;
       width: 50%;
       height: 617px;
+      position: relative;
+
+      & img{
+        position: absolute;
+        right: -80px;
+      }
     }
     
     .contact .button {
