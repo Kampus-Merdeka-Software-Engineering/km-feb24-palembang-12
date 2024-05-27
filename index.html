@@ -41,36 +41,44 @@
           </header>
 
           <div class="dropdowns">
-            <select class="dropdown">
-              <option>Building Type</option>
-            </select>
+            <select id="locationDropdown" class="dropdown">
+              <option value="">Location</option>
+              <option value="Brooklyn">Brooklyn</option>
+              <option value="Bronxn">Bronxn</option>
+              <option value="Manhattan">Manhattan</option>
+              <option value="Queens">Queens</option>
+              <option value="Staten Island">Staten Island</option>
+          </select>
 
-            <select class="dropdown">
-              <option>Location</option>
+            <select id="buildingTypeDropdown" class="dropdown">
+                <option value="">Building Type</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Mixed Use">Mixed Use</option>
             </select>
-          </div>
+        </div>
 
           <div class="stats-container">
             <div class="stat-box">
-              <h2>Average Sale Price Per Unit</h2>
-              <p>$623,30 rb</p>
+                <h2>Average Sale Price Per Unit</h2>
+                <p id="averageSalePrice">$0</p>
             </div>
-
+    
             <div class="stat-box">
-              <h2>Total Sales 2017</h2>
-              <p>$43,05 M</p>
+                <h2>Total Sales 2017</h2>
+                <p id="totalSales2017">$0</p>
             </div>
-
+    
             <div class="stat-box">
-              <h2>Total Unit</h2>
-              <p>108.394</p>
+                <h2>Total Units</h2>
+                <p id="totalUnits">0</p>
             </div>
-
+    
             <div class="stat-box">
-              <h2>Total Sales 2018</h2>
-              <p>$51,67 M</p>
+                <h2>Total Sales 2018</h2>
+                <p id="totalSales2018">$0</p>
             </div>
-          </div>
+        </div>
         </div>
       </section>
 
@@ -342,7 +350,7 @@
       <!-- end our team section -->
     </main>
     <footer-card></footer-card>
-
+    <script src="./js/dashBoard.js"></script>
     <script src="Component/navbar.js"></script>
     <script src="Component/hero.js"></script>
     <script src="Component/footer.js"></script>

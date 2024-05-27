@@ -1,0 +1,92 @@
+[
+  {
+    "LOCATION": "Queens",
+    "BUILDING_TYPE": "Residential",
+    "AVERAGE_SALES_PRICE": 224.11903281134545,
+    "TOTAL_UNITS": 22285
+  },
+  {
+    "LOCATION": "Brooklyn",
+    "BUILDING_TYPE": "Residential",
+    "AVERAGE_SALES_PRICE": 462.83955770855795,
+    "TOTAL_UNITS": 20704
+  },
+  {
+    "LOCATION": "Manhattan",
+    "BUILDING_TYPE": "Residential",
+    "AVERAGE_SALES_PRICE": 1280.7508227043288,
+    "TOTAL_UNITS": 17777
+  },
+  {
+    "LOCATION": "Staten Island",
+    "BUILDING_TYPE": "Residential",
+    "AVERAGE_SALES_PRICE": 126.9100587108425,
+    "TOTAL_UNITS": 7412
+  },
+  {
+    "LOCATION": "Bronxn",
+    "BUILDING_TYPE": "Residential",
+    "AVERAGE_SALES_PRICE": 217.39272120186317,
+    "TOTAL_UNITS": 11024
+  },
+  {
+    "LOCATION": "Brooklyn",
+    "BUILDING_TYPE": "Mixed Use",
+    "AVERAGE_SALES_PRICE": 891.1575098543489,
+    "TOTAL_UNITS": 3735
+  },
+  {
+    "LOCATION": "Brooklyn",
+    "BUILDING_TYPE": "Commercial",
+    "AVERAGE_SALES_PRICE": 342.7557795629189,
+    "TOTAL_UNITS": 788
+  },
+  {
+    "LOCATION": "Queens",
+    "BUILDING_TYPE": "Mixed Use",
+    "AVERAGE_SALES_PRICE": 130.2564533457685,
+    "TOTAL_UNITS": 4839
+  },
+  {
+    "LOCATION": "Queens",
+    "BUILDING_TYPE": "Commercial",
+    "AVERAGE_SALES_PRICE": 471.2694612121881,
+    "TOTAL_UNITS": 4062
+  },
+  {
+    "LOCATION": "Manhattan",
+    "BUILDING_TYPE": "Commercial",
+    "AVERAGE_SALES_PRICE": 5740.0770569459155,
+    "TOTAL_UNITS": 1779
+  },
+  {
+    "LOCATION": "Manhattan",
+    "BUILDING_TYPE": "Mixed Use",
+    "AVERAGE_SALES_PRICE": 3567.6726423983496,
+    "TOTAL_UNITS": 8333
+  },
+  {
+    "LOCATION": "Bronxn",
+    "BUILDING_TYPE": "Commercial",
+    "AVERAGE_SALES_PRICE": 189.7601381384374,
+    "TOTAL_UNITS": 357
+  },
+  {
+    "LOCATION": "Bronxn",
+    "BUILDING_TYPE": "Mixed Use",
+    "AVERAGE_SALES_PRICE": 348.4299030004428,
+    "TOTAL_UNITS": 4638
+  },
+  {
+    "LOCATION": "Staten Island",
+    "BUILDING_TYPE": "Commercial",
+    "AVERAGE_SALES_PRICE": 16.014345036836414,
+    "TOTAL_UNITS": 408
+  },
+  {
+    "LOCATION": "Staten Island",
+    "BUILDING_TYPE": "Mixed Use",
+    "AVERAGE_SALES_PRICE": 122.45447574420893,
+    "TOTAL_UNITS": 253
+  }
+]
