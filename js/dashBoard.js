@@ -39,6 +39,7 @@ fetch("../data/sales_target_2018.json")
     .then((data) => {
         salesData = data;
     })
+    
     .catch((error) => {
         console.error('Error loading sales data:', error);
     });
