@@ -1,0 +1,40 @@
+/* main section */
+.parent {
+    display: grid;
+    padding: 20px 100px;
+    box-shadow: 0 5px 50px 0 rgba(95, 69, 69, 0.2);
+    transition: 0.3s;
+  }
+  
+  .div1 {
+    padding-right: 10cm;
+    padding-top: 2cm;
+    text-align: justify;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    padding-left: 0cm;
+    padding-top: 2cm;
+    text-align: justify;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div3 {
+    padding-right: 10cm;
+    padding-top: 2cm;
+    text-align: justify;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div4 {
+    padding-left: 0cm;
+    padding-top: 2cm;
+    text-align: justify;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .div5 {
+    padding-left: 360px;
+    padding-top: 2cm;
+    text-align: justify;
+  }
+
+  /* end main section */
+  
