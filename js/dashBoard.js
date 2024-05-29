@@ -1,12 +1,12 @@
 let salesData = [];
 let buildingData = [];
 
-// Fungsi untuk memperbarui tampilan berdasarkan pilihan dropdown
+// Fungsi memperbarui tampilan berdasarkan dropdown
 function updateStats() {
     const buildingType = document.getElementById('buildingTypeDropdown').value;
     const location = document.getElementById('locationDropdown').value;
 
-    // Filter data berdasarkan pilihan dropdown
+    // Filter data berdasarkan dropdown
     const filteredBuildingData = buildingData.filter(item => item.LOCATION === location && item.BUILDING_TYPE === buildingType);
     const filteredSalesData = salesData.filter(item => item.LOCATION === location);
 
@@ -28,7 +28,7 @@ function updateStats() {
     }
 }
 
-// Muat data JSON pertama
+// data json building type
 fetch("../data/sales_target_2018.json")
     .then((response) => {
         if (!response.ok) {
@@ -44,7 +44,7 @@ fetch("../data/sales_target_2018.json")
         console.error('Error loading sales data:', error);
     });
 
-// Muat data JSON kedua
+// data json location
 fetch("../data/avg-sales.json")
     .then((response) => {
         if (!response.ok) {
@@ -59,9 +59,12 @@ fetch("../data/avg-sales.json")
         console.error('Error loading building data:', error);
     });
 
-// Tambahkan event listener ke dropdowns untuk memanggil updateStats setiap kali ada perubahan
 document.getElementById('buildingTypeDropdown').addEventListener('change', updateStats);
 document.getElementById('locationDropdown').addEventListener('change', updateStats);
-
-// Panggil updateStats saat halaman pertama kali dimuat untuk menginisialisasi tampilan
 window.onload = updateStats;
+
+// link to team section
+const button = document.getElementById('teamButton');
+button.addEventListener('click', function() {
+    window.location.href = 'team.html';
+});
