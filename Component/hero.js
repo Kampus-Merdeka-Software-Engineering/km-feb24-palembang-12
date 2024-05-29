@@ -55,7 +55,7 @@ heroTemplate.innerHTML = `
 
       & img{
         position: absolute;
-        right: -80px;
+        right: -70px;
       }
     }
     
