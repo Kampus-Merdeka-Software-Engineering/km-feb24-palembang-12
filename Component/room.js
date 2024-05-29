@@ -18,6 +18,7 @@ roomTemplate.innerHTML = `
         img{
             width: 100%;
             height: 80%;
+            border-radius: inherit;
         }
         .card .label-wrapper{
             display: flex;

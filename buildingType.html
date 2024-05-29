@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Building Type</title>
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/buildingType.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/buildingType.css" />
 
     <!-- Boxicon CSS -->
     <link
@@ -15,92 +17,76 @@
     />
   </head>
   <body>
+    <!-- navbar -->
     <nav-card></nav-card>
+
+    <!-- hero -->
     <hero-card>
       <div slot="page">Building Type</div>
       <div slot="title">Homes For You</div>
     </hero-card>
+
+    <!-- MAIN CONTENT -->
     <main>
+      <!-- card section -->
       <section>
         <div class="card-group">
-          <div class="card">
-            <img
-              src="assets/images/building_types/p11.png"
-              alt="Property Image"
-            />
-
-            <div class="label-sale">FOR SALE</div>
-            <div class="label-featured">FEATURED</div>
-
-            <div class="container">
-              <h4 class="title">Manhattan</h4>
-              <p class="details">Residential</p>
-              <p class="price">$1.281</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="assets/images/building_types/p13.png"
-              alt="Property Image"
-            />
-
-            <div class="label-sale">FOR SALE</div>
-            <div class="label-featured">FEATURED</div>
-
-            <div class="container">
-              <h4 class="title">Brooklyn</h4>
-              <p class="details">Commercial</p>
-              <p class="price">$343</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="assets/images/building_types/p15.png"
-              alt="Property Image"
-            />
-
-            <div class="label-sale">FOR SALE</div>
-            <div class="label-featured">FEATURED</div>
-
-            <div class="container">
-              <h4 class="title">Queens</h4>
-              <p class="details">Mixed Use</p>
-              <p class="price">$130</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="assets/images/building_types/p16.png"
-              alt="Property Image"
-            />
-
-            <div class="label-sale">FOR SALE</div>
-            <div class="label-featured">FEATURED</div>
-
-            <div class="container">
-              <h4 class="title">Bronx</h4>
-              <p class="details">Commercial</p>
-              <p class="price">$190</p>
-            </div>
-          </div>
-          <div class="card-item"></div>
-          <div class="card">
-            <img
-              src="assets/images/building_types/p18.png"
-              alt="Property Image"
-            />
-
-            <div class="label-sale">FOR SALE</div>
-            <div class="label-featured">FEATURED</div>
-
-            <div class="container">
-              <h4 class="title">Staten Island</h4>
-              <p class="details">Commercial</p>
-              <p class="price">$16</p>
-            </div>
-          </div>
+          <room-card sale image="assets/images/building_types/p11.png">
+            <span slot="title">Manhattan</span>
+            <span slot="details">Residential</span>
+            <span slot="price">1281</span>
+            <span slot="room-total">2</span>
+            <span slot="bathroom-total">2</span>
+            <span slot="sqrfeet-total">400</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p13.png">
+            <span slot="title">Brooklyn</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">343</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">210</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p15.png">
+            <span slot="title">Queens</span>
+            <span slot="details">Mixed used</span>
+            <span slot="price">130</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">61</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p16.png">
+            <span slot="title">Bronx</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">190</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">72</span>
+          </room-card>
+          <room-card
+            sale
+            featured
+            image="https://pic.le-cdn.com/thumbs/1024x768/04/1/properties/Property-173000000000050c00165e3c08a5-84684823.jpg"
+          >
+            <span slot="title">Manhattan</span>
+            <span slot="details">Residential</span>
+            <span slot="price">1600</span>
+            <span slot="room-total">2</span>
+            <span slot="bathroom-total">2</span>
+            <span slot="sqrfeet-total">400</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p18.png">
+            <span slot="title">Staten Island</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">1600</span>
+            <span slot="room-total">3</span>
+            <span slot="bathroom-total">2</span>
+            <span slot="sqrfeet-total">480</span>
+          </room-card>
         </div>
       </section>
+
+      <!-- chart section -->
       <section>
         <div class="chart-group">
           <div class="chart-item chart1">
@@ -125,20 +111,25 @@
               </div>
             </div>
           </div>
+          <!-- <div class="chart-item">chart1</div>
           <div class="chart-item">chart1</div>
-          <div class="chart-item">chart1</div>
-          <div class="chart-item">chart1</div>
+          <div class="chart-item">chart1</div> -->
         </div>
       </section>
     </main>
+    <!-- END MAIN CONTENT -->
 
+    <!-- footer -->
     <footer-card></footer-card>
 
-    <!-- Script -->
+    <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/buildingType.js"></script>
+
+    <!-- Component -->
     <script src="Component/hero.js"></script>
     <script src="Component/navbar.js"></script>
     <script src="Component/footer.js"></script>
-    <script src="js/buildingType.js"></script>
+    <script src="Component/room.js"></script>
   </body>
 </html>
