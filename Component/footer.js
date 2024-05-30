@@ -317,12 +317,11 @@ class Footer extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
-    // this.addEventListeners(shadowRoot);
     this.loadScript(
       "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     )
       .then(() => {
-        emailjs.init("A-RZ8qEPMIr1s64QE"); // Replace with your EmailJS user ID
+        emailjs.init("A-RZ8qEPMIr1s64QE");
         this.addEventListeners(shadowRoot);
       })
       .catch((error) => console.error("Failed to load EmailJS script:", error));
