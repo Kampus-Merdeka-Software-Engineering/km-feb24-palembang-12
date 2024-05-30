@@ -86,7 +86,7 @@ navbarTemplate.innerHTML = `
                     <li><a href="sales.html">Sales</a></li>
                     <li><a href="#team">Our Team</a></li>
                 </ul>
-                <button class="button">Contact Us</button>
+                <button class="button" id="contactUs">Contact Us</button>
                 </div>
             </div>
         </nav>
@@ -99,6 +99,10 @@ class Navbar extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
+
+    const contact = shadowRoot.getElementById('contactUs');
+    contact.addEventListener('click', function() {
+    window.location.href = 'contact.html';})
   }
 }
 window.customElements.define("nav-card", Navbar);

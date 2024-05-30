@@ -80,7 +80,7 @@ heroTemplate.innerHTML = `
       <h2><slot name= "title" /></h2>
       <p><slot name= "desc" /></p>
       <div class="contact">
-        <button class="button">Contact Us</button>
+        <button class="button" id="contactUs">Contact Us</button>
       </div>
     </div>
     <div class="hero-image">
@@ -95,6 +95,10 @@ class Hero extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(heroTemplate.content.cloneNode(true));
+
+    const contact = shadowRoot.getElementById('contactUs');
+    contact.addEventListener('click', function() {
+    window.location.href = 'contact.html';})
   }
 }
 
