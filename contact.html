@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="question">Select a Question:</label>
+            <select id="question" name="question" required>
+                <option value="" disabled selected>Select your question</option>
+                <option value="question1">What is your return policy?</option>
+                <option value="question2">How do I track my order?</option>
+                <option value="question3">Can I purchase items again?</option>
+            </select>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" required></textarea>
+
+            <button type="submit">Submit Ticket</button>
+        </form>
+    </div>
+
+    <script src="./js/contact.js"></script>
+</body>
+</html>
