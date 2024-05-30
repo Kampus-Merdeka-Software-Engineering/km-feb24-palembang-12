@@ -32,7 +32,6 @@ function salesDisplay(){
     const data = salesData;
     const manhattanData = data.find(item => item.LOCATION === "Manhattan");
     if (manhattanData) {
-        console.log('Manhattan Data:', manhattanData);
         document.getElementById('total_sales_2016').textContent = formatNumber(manhattanData.TOTAL_SALES_2016);
         document.getElementById('total_sales_2017').textContent = formatNumber(manhattanData.TOTAL_SALES_2017);
         document.getElementById('sales_target_2018').textContent = formatNumber(manhattanData.SALES_TARGET_2018);
