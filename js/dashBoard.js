@@ -28,6 +28,25 @@ function updateStats() {
     }
 }
 
+function salesDisplay(){
+    const data = salesData;
+    const manhattanData = data.find(item => item.LOCATION === "Manhattan");
+    if (manhattanData) {
+        console.log('Manhattan Data:', manhattanData);
+        document.getElementById('total_sales_2016').textContent = formatNumber(manhattanData.TOTAL_SALES_2016);
+        document.getElementById('total_sales_2017').textContent = formatNumber(manhattanData.TOTAL_SALES_2017);
+        document.getElementById('sales_target_2018').textContent = formatNumber(manhattanData.SALES_TARGET_2018);
+    } else {
+        console.error('Data untuk Manhattan tidak ditemukan');
+    }
+}
+
+function formatNumber(num) {
+    const million = num / 1000000;
+    const formattedNumber = million.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return `$${formattedNumber}M`;
+}
+
 // data json building type
 fetch("../data/sales_target_2018.json")
     .then((response) => {
@@ -38,6 +57,7 @@ fetch("../data/sales_target_2018.json")
     })
     .then((data) => {
         salesData = data;
+        salesDisplay();
     })
     
     .catch((error) => {
@@ -67,4 +87,9 @@ window.onload = updateStats;
 const button = document.getElementById('teamButton');
 button.addEventListener('click', function() {
     window.location.href = 'team.html';
+});
+
+const sales = document.getElementById('sales-learnMore');
+sales.addEventListener('click', function() {
+    window.location.href = 'sales.html';
 });

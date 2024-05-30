@@ -317,6 +317,10 @@
 /* end unit section */
 
 /* sales section */
+#sales-learnMore {
+  cursor: pointer;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
