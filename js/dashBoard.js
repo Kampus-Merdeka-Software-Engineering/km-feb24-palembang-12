@@ -43,7 +43,7 @@ function salesDisplay(){
 function formatNumber(num) {
     const million = num / 1000000;
     const formattedNumber = million.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return `$${formattedNumber}M`;
+    return `$ ${formattedNumber} M`;
 }
 
 // data json building type
