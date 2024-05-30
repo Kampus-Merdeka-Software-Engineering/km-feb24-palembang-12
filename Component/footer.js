@@ -188,14 +188,77 @@ footerTemplate.innerHTML = `
         .footer-distributed .footer-center i {
           margin-left: 0;
         }
+        .newsletter-container{
+          margin: 0 auto;
+        }
       }
+
+      .newsletter-container {
+          width: fit-content;
+          display: flex;
+          flex-direction: column;
+          
+          & h2{
+            color: #fff;
+          }
+          & > *{
+            margin-bottom: 10px;
+          }
+          
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          min-width: 280px;
+          max-width: 380px;
+          gap: 15px;
+          
+          & .form-input{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%
+          }
+          & .form-input input {
+            flex: 1 1 100px;
+            border: none;
+            padding: 8px;
+            border-bottom: 3px solid grey;
+          }
+          & input[type="submit"] {
+            background-color: var(--primary-color);
+            padding: 8px 12px;
+            border: none;
+
+            font-weight: bold;
+          }
+        }
       
     </style>
-
+    
     <footer class="footer-distributed">
         <div class="footer-left">
             <h3><span>NYC</span></h3>
+            <div class="newsletter-container">
+              <h2>Subscribe for More Content</h2>
+              <form id="newsletterForm">
+                <div class="form-input">
+                  <input type="text" id="news-name"
+                  name="name"
+                  placeholder="Name"
+                  required 
+                  />
 
+                  <input type="email" id="news-email"
+                  name="email"
+                  placeholder="Email Adress"
+                  required />
+                </div>
+                <input type="submit" value="Subscribe" />
+              </form>
+            </div>
             <p class="footer-links">
                 <a href="index.html" class="link-1">Home</a>
 
@@ -254,6 +317,59 @@ class Footer extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
+    // this.addEventListeners(shadowRoot);
+    this.loadScript(
+      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    )
+      .then(() => {
+        emailjs.init("A-RZ8qEPMIr1s64QE"); // Replace with your EmailJS user ID
+        this.addEventListeners(shadowRoot);
+      })
+      .catch((error) => console.error("Failed to load EmailJS script:", error));
+  }
+
+  loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.head.appendChild(script);
+    });
+  }
+
+  addEventListeners(shadowRoot) {
+    shadowRoot
+      .getElementById("newsletterForm")
+      .addEventListener("submit", (event) => {
+        event.preventDefault();
+        this.sendNewsletter(shadowRoot);
+        // alert("button clicked");
+      });
+  }
+
+  sendNewsletter(shadowRoot) {
+    const username = shadowRoot.getElementById("news-name").value;
+    const useremail = shadowRoot.getElementById("news-email").value;
+
+    console.log(username, useremail);
+
+    let newsletter = {
+      name: username,
+      email: useremail,
+    };
+
+    emailjs.send("service_yjnqsai", "template_i2ifg2g", newsletter).then(
+      () => {
+        alert("Email sent successfully!");
+        shadowRoot.getElementById("news-name").value = "";
+        shadowRoot.getElementById("news-email").value = "";
+      },
+      (error) => {
+        console.error("Email sending failed:", error);
+        alert("Failed to send email. Please try again.");
+      }
+    );
   }
 }
 
