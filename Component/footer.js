@@ -210,7 +210,7 @@ footerTemplate.innerHTML = `
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          min-width: 280px;
+          min-width: 220px;
           max-width: 380px;
           gap: 15px;
           
@@ -234,6 +234,12 @@ footerTemplate.innerHTML = `
 
             font-weight: bold;
           }
+          & #message{
+            display: none;
+            color: white;
+            font-weight: 400;
+            font-size: 12px;
+          }
         }
       
     </style>
@@ -244,6 +250,7 @@ footerTemplate.innerHTML = `
             <div class="newsletter-container">
               <h2>Subscribe for More Content</h2>
               <form id="newsletterForm">
+              <span id="message"></span>
                 <div class="form-input">
                   <input type="text" id="news-name"
                   name="name"
@@ -317,20 +324,22 @@ class Footer extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
-    this.loadScript(
-      "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    )
+    // load EmailJS CDN
+    this.loadScript()
       .then(() => {
+        // Initialize emailJS
         emailjs.init("A-RZ8qEPMIr1s64QE");
         this.addEventListeners(shadowRoot);
       })
       .catch((error) => console.error("Failed to load EmailJS script:", error));
   }
 
-  loadScript(src) {
+  // function to crate JS script for EmailJS CDN
+  loadScript() {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.src = src;
+      script.src =
+        "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
       script.onload = resolve;
       script.onerror = reject;
       document.head.appendChild(script);
@@ -343,15 +352,13 @@ class Footer extends HTMLElement {
       .addEventListener("submit", (event) => {
         event.preventDefault();
         this.sendNewsletter(shadowRoot);
-        // alert("button clicked");
       });
   }
 
   sendNewsletter(shadowRoot) {
     const username = shadowRoot.getElementById("news-name").value;
     const useremail = shadowRoot.getElementById("news-email").value;
-
-    console.log(username, useremail);
+    const message = shadowRoot.getElementById("message");
 
     let newsletter = {
       name: username,
@@ -360,7 +367,13 @@ class Footer extends HTMLElement {
 
     emailjs.send("service_yjnqsai", "template_i2ifg2g", newsletter).then(
       () => {
-        alert("Email sent successfully!");
+        message.textContent = "Email sent successfully!";
+        message.style.display = "block";
+
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 3000);
+
         shadowRoot.getElementById("news-name").value = "";
         shadowRoot.getElementById("news-email").value = "";
       },
