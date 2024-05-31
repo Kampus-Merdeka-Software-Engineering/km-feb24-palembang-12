@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Table</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css" />
+
+    <!-- Boxicon CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav-card></nav-card>
+
+    <!-- hero -->
+    <hero-card>
+      <div slot="page">Sales Data</div>
+      <div slot="title">Our Growth in 2016/2017</div>
+    </hero-card>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!--Total Units by Sales Price Table-->
+        <section>
+            <h1>TOTAL UNIT BASED ON AVERAGE SELLING PRICE</h1>
+            <table id="totalUnitsAvg" class="display">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Building Type</th>
+                        <th>AVG Sales Price</th>
+                        <th>Total Units</th>
+                    </tr>
+                </thead>
+                    <tbody>
+
+                    </tbody>
+            </table>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+            <script src="script.js"></script>
+            
+        </section>
+
+        <!--Total Units Sold by Price Category Table-->
+        <section>
+            <h1>TOTAL UNIT SOLD BY PRICE CATEGORY</h1>
+            <table id="priceCategory">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Building Type</th>
+                        <th>Price Range Category</th>
+                        <th>Unit Price Range</th>
+                    </tr>
+                </thead>
+                    <tbody>
+
+                    </tbody>
+            </table>
+        </section>
+
+        <!--Average Unit Sales Based on Building Type Table-->
+        <section>
+            <h1>AVERAGE UNIT SALES BASED ON BUILDING TYPE</h1>
+            <table id="unitSales">
+                <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Building Type</th>
+                        <th>Land Square Feet Category</th>
+                        <th>Average Sales Price</th>
+                        <th>Total Units</th>
+                    </tr>
+                </thead>
+                    <!-- <tbody>
+
+                    </tbody> -->
+                    <!-- <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                    </tr> -->
+            </table>
+        </section>
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- footer -->
+    <footer-card></footer-card>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/table.js"></script>
+
+    <!-- Component -->
+    <script src="Component/hero.js"></script>
+    <script src="Component/navbar.js"></script>
+    <script src="Component/footer.js"></script>
+  </body>
+</html>

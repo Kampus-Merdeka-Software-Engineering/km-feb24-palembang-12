@@ -1,0 +1,92 @@
+[
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"AVERAGE SALES PRICE": "224.11903281134545",
+		"TOTAL UNITS": "22285"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"AVERAGE SALES PRICE": "462.83955770855795",
+		"TOTAL UNITS": "20704"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"AVERAGE SALES PRICE": "1280.7508227043288",
+		"TOTAL UNITS": "17777"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"AVERAGE SALES PRICE": "126.9100587108425",
+		"TOTAL UNITS": "7412"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"AVERAGE SALES PRICE": "217.39272120186317",
+		"TOTAL UNITS": "11024"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"AVERAGE SALES PRICE": "891.1575098543489",
+		"TOTAL UNITS": "3735"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"AVERAGE SALES PRICE": "342.7557795629189",
+		"TOTAL UNITS": "788"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"AVERAGE SALES PRICE": "130.2564533457685",
+		"TOTAL UNITS": "4839"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"AVERAGE SALES PRICE": "471.2694612121881",
+		"TOTAL UNITS": "4062"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"AVERAGE SALES PRICE": "5740.0770569459155",
+		"TOTAL UNITS": "1779"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"AVERAGE SALES PRICE": "3567.6726423983496",
+		"TOTAL UNITS": "8333"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"AVERAGE SALES PRICE": "189.7601381384374",
+		"TOTAL UNITS": "357"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"AVERAGE SALES PRICE": "348.4299030004428",
+		"TOTAL UNITS": "4638"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"AVERAGE SALES PRICE": "16.014345036836414",
+		"TOTAL UNITS": "408"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"AVERAGE SALES PRICE": "122.45447574420893",
+		"TOTAL UNITS": "253"
+	}
+]
