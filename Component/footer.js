@@ -224,21 +224,44 @@ footerTemplate.innerHTML = `
           & .form-input input {
             flex: 1 1 100px;
             border: none;
-            padding: 8px;
-            border-bottom: 3px solid grey;
+            padding: 8px 2px;
+            background: none;
+            border-bottom: 3px solid rgba(255, 255, 255, .08);
+            color: #fff;
+            transition: all .3s ease-in-out;
+
+            &:focus{
+              outline: none;
+              border-bottom: 3px solid #fff;
+            }
+            &::placeholder{
+              color: #fff;
+            }
+            &:focus::placeholder{
+              opacity: 0;
+            }
+            
           }
           & input[type="submit"] {
-            background-color: var(--primary-color);
+            background-color: rgba(255, 255, 255, .08);
             padding: 8px 12px;
             border: none;
-
+            color: #fff;
             font-weight: bold;
+            border-radius: 12px;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+              background-color: rgba(255, 255, 255, .15);
+              cursor: pointer;
+            }
           }
           & #message{
             display: none;
             color: white;
             font-weight: 400;
             font-size: 12px;
+            
           }
         }
       
