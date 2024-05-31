@@ -263,7 +263,7 @@ footerTemplate.innerHTML = `
                   placeholder="Email Adress"
                   required />
                 </div>
-                <input type="submit" value="Subscribe" />
+                <input type="submit" id="newsletterBtn" value="Subscribe" />
               </form>
             </div>
             <p class="footer-links">
@@ -324,12 +324,19 @@ class Footer extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(footerTemplate.content.cloneNode(true));
+
+    const newsletterBtn = shadowRoot.getElementById("newsletterBtn");
+
     // load EmailJS CDN
     this.loadScript()
       .then(() => {
         // Initialize emailJS
         emailjs.init("A-RZ8qEPMIr1s64QE");
-        this.addEventListeners(shadowRoot);
+        // newsletter event listener
+        newsletterBtn.addEventListener("click", (event) => {
+          event.preventDefault();
+          this.sendNewsletter(shadowRoot);
+        });
       })
       .catch((error) => console.error("Failed to load EmailJS script:", error));
   }
@@ -346,15 +353,7 @@ class Footer extends HTMLElement {
     });
   }
 
-  addEventListeners(shadowRoot) {
-    shadowRoot
-      .getElementById("newsletterForm")
-      .addEventListener("submit", (event) => {
-        event.preventDefault();
-        this.sendNewsletter(shadowRoot);
-      });
-  }
-
+  // function to send newsletter email
   sendNewsletter(shadowRoot) {
     const username = shadowRoot.getElementById("news-name").value;
     const useremail = shadowRoot.getElementById("news-email").value;
