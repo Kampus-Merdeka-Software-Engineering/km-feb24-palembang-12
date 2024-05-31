@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Type</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/buildingType.css" />
+
+    <!-- Boxicon CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav-card></nav-card>
+
+    <!-- hero -->
+    <hero-card>
+      <div slot="page">Building Type</div>
+      <div slot="title">Homes For You</div>
+    </hero-card>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- card section -->
+      <section>
+        <div class="card-group">
+          <room-card sale image="assets/images/building_types/p11.png">
+            <span slot="title">Manhattan</span>
+            <span slot="details">Residential</span>
+            <span slot="price">1281</span>
+            <span slot="room-total">2</span>
+            <span slot="bathroom-total">2</span>
+            <span slot="sqrfeet-total">400</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p13.png">
+            <span slot="title">Brooklyn</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">343</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">210</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p15.png">
+            <span slot="title">Queens</span>
+            <span slot="details">Mixed used</span>
+            <span slot="price">130</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">61</span>
+          </room-card>
+          <room-card sale featured image="assets/images/building_types/p16.png">
+            <span slot="title">Bronx</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">190</span>
+            <span slot="room-total">1</span>
+            <span slot="bathroom-total">1</span>
+            <span slot="sqrfeet-total">72</span>
+          </room-card>
+          <div class="div"></div>
+          <room-card sale featured image="assets/images/building_types/p18.png">
+            <span slot="title">Staten Island</span>
+            <span slot="details">Commercial</span>
+            <span slot="price">1600</span>
+            <span slot="room-total">3</span>
+            <span slot="bathroom-total">2</span>
+            <span slot="sqrfeet-total">480</span>
+          </room-card>
+        </div>
+      </section>
+
+      <!-- chart section -->
+      <section>
+        <div class="chart-group">
+          <div class="chart-item chart1">
+            <h2>UNIT RESIDENTIAL AND COMMERCIAL</h2>
+            <canvas id="resdCommUnit"></canvas>
+          </div>
+          <div class="chart-item card1">
+            <div class="building-item">
+              <div class="img-wrapper">
+                <img src="assets/images/building/residential.png" alt="" />
+              </div>
+              <div class="building-content">
+                <h3>Residential Unit</h3>
+              </div>
+            </div>
+            <div class="building-item">
+              <div class="img-wrapper">
+                <img src="assets/images/building/commercial.png" alt="" />
+              </div>
+              <div class="building-content">
+                <h3>Commercial Unit</h3>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="chart-item">chart1</div>
+          <div class="chart-item">chart1</div>
+          <div class="chart-item">chart1</div> -->
+        </div>
+      </section>
+    </main>
+    <!-- END MAIN CONTENT -->
+
+    <!-- footer -->
+    <footer-card></footer-card>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/buildingType.js"></script>
+
+    <!-- Component -->
+    <script src="Component/hero.js"></script>
+    <script src="Component/navbar.js"></script>
+    <script src="Component/footer.js"></script>
+    <script src="Component/room.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "SALE_DATE": "Sep",
+    "Total_Units": 11283,
+    "Total_Sale_Price": 6157002389
+  },
+  {
+    "SALE_DATE": "Oct",
+    "Total_Units": 9130,
+    "Total_Sale_Price": 4698793703
+  },
+  {
+    "SALE_DATE": "Nov",
+    "Total_Units": 11075,
+    "Total_Sale_Price": 5440593187
+  },
+  {
+    "SALE_DATE": "Dec",
+    "Total_Units": 12283,
+    "Total_Sale_Price": 8210714171
+  },
+  {
+    "SALE_DATE": "Jan",
+    "Total_Units": 7959,
+    "Total_Sale_Price": 6373565061
+  },
+  {
+    "SALE_DATE": "Feb",
+    "Total_Units": 6812,
+    "Total_Sale_Price": 4211482908
+  },
+  {
+    "SALE_DATE": "Mar",
+    "Total_Units": 8348,
+    "Total_Sale_Price": 5565872079
+  },
+  {
+    "SALE_DATE": "Apr",
+    "Total_Units": 6832,
+    "Total_Sale_Price": 4397093644
+  },
+  {
+    "SALE_DATE": "May",
+    "Total_Units": 8280,
+    "Total_Sale_Price": 8031364207
+  },
+  {
+    "SALE_DATE": "Jun",
+    "Total_Units": 10937,
+    "Total_Sale_Price": 5849292057
+  },
+  {
+    "SALE_DATE": "Jul",
+    "Total_Units": 9298,
+    "Total_Sale_Price": 4621301958
+  },
+  {
+    "SALE_DATE": "Aug",
+    "Total_Units": 6157,
+    "Total_Sale_Price": 4004934021
+  }
+]

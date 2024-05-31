@@ -1,0 +1,272 @@
+[
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "\"6"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "\"4"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "\"4"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "\"3"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "\"3"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "\"2"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "\"2"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "\"1"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "\"1"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "\"1"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "\"1"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "\"1"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "370"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "308"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "291"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "237"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "229"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "188"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "177"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "170"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "150"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "137"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "120"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "119"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "101"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "73"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "73"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "66"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "58"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "51"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "48"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "47"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "46"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "42"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "39"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "38"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "37"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "32"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "28"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "28"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "28"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Low",
+		"UNIT PRACE RANGE": "19"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "High",
+		"UNIT PRACE RANGE": "11"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "3"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"PRICE RANGE CATEGORY": "Medium",
+		"UNIT PRACE RANGE": "3"
+	}
+]

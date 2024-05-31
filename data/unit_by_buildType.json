@@ -1,0 +1,345 @@
+[
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$233.04",
+		"TOTAL UNITS": "\"17"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$450.31",
+		"TOTAL UNITS": "\"16"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "\"$1",
+		"TOTAL UNITS": "357.23\""
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$191.54",
+		"TOTAL UNITS": "\"6"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$156.61",
+		"TOTAL UNITS": "\"5"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$117.66",
+		"TOTAL UNITS": "\"4"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "\"$3",
+		"TOTAL UNITS": "074.07\""
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "\"$1",
+		"TOTAL UNITS": "552.59\""
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$334.86",
+		"TOTAL UNITS": "\"3"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$647.99",
+		"TOTAL UNITS": "\"3"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$197.41",
+		"TOTAL UNITS": "\"3"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "\"$4",
+		"TOTAL UNITS": "184.75\""
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$744.52",
+		"TOTAL UNITS": "\"2"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$520.3",
+		"TOTAL UNITS": "\"2"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$0.12",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$389.4",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$96.73",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "\"$4",
+		"TOTAL UNITS": "288.29\""
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$85.46",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$599.55",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "\"$3",
+		"TOTAL UNITS": "320.49\""
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$604.83",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "\"$1",
+		"TOTAL UNITS": "354.51\""
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$584.21",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$461.87",
+		"TOTAL UNITS": "\"1"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$104.47",
+		"TOTAL UNITS": "955"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$533.03",
+		"TOTAL UNITS": "874"
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$578.76",
+		"TOTAL UNITS": "847"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$93.67",
+		"TOTAL UNITS": "801"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$45.1",
+		"TOTAL UNITS": "546"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "\"$5",
+		"TOTAL UNITS": "539.21\""
+	},
+	{
+		"LOCATION": "Queens",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$398.58",
+		"TOTAL UNITS": "404"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$901.58",
+		"TOTAL UNITS": "378"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$825.47",
+		"TOTAL UNITS": "336"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$2.56",
+		"TOTAL UNITS": "256"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$263.33",
+		"TOTAL UNITS": "218"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$3.4",
+		"TOTAL UNITS": "204"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$150.02",
+		"TOTAL UNITS": "137"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Residential",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$0.25",
+		"TOTAL UNITS": "128"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Mixed Use",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$106.3",
+		"TOTAL UNITS": "116"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$364.59",
+		"TOTAL UNITS": "100"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Medium",
+		"AVERAGE SALES PRICE": "$126.35",
+		"TOTAL UNITS": "84"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Small",
+		"AVERAGE SALES PRICE": "$166.74",
+		"TOTAL UNITS": "56"
+	},
+	{
+		"LOCATION": "Manhattan",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "\"$15",
+		"TOTAL UNITS": "926.38\""
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$205.91",
+		"TOTAL UNITS": "41"
+	},
+	{
+		"LOCATION": "Brooklyn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$0.26",
+		"TOTAL UNITS": "33"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$358.03",
+		"TOTAL UNITS": "33"
+	},
+	{
+		"LOCATION": "Staten Island",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Large",
+		"AVERAGE SALES PRICE": "$46.23",
+		"TOTAL UNITS": "12"
+	},
+	{
+		"LOCATION": "Bronxn",
+		"BUILDING TYPE": "Commercial",
+		"LAND SQUARE FEET CATEGORY": "Extra Large",
+		"AVERAGE SALES PRICE": "$55.82",
+		"TOTAL UNITS": "6"
+	}
+]

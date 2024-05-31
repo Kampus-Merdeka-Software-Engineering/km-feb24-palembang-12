@@ -1,0 +1,27 @@
+[
+  {
+    "LOCATION": "Queens",
+    "RESIDENTIAL UNIT": 26600,
+    "COMMERCIAL UNIT": 4586
+  },
+  {
+    "LOCATION": "Manhattan",
+    "RESIDENTIAL UNIT": 25596,
+    "COMMERCIAL UNIT": 2293
+  },
+  {
+    "LOCATION": "Brooklyn",
+    "RESIDENTIAL UNIT": 23566,
+    "COMMERCIAL UNIT": 1661
+  },
+  {
+    "LOCATION": "Bronxn",
+    "RESIDENTIAL UNIT": 15329,
+    "COMMERCIAL UNIT": 690
+  },
+  {
+    "LOCATION": "Staten Island",
+    "RESIDENTIAL UNIT": 7572,
+    "COMMERCIAL UNIT": 501
+  }
+]

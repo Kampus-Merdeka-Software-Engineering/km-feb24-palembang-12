@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/sales.css" />
+
+    <!-- Boxicon CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav-card></nav-card>
+    <!-- hero -->
+    <hero-card>
+      <div slot="page">Sales</div>
+      <div slot="title">Looking for 2018 Sales Target</div>
+    </hero-card>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="parent">
+            <div class="div1">
+              <h1>Sales Target 2018</h1>
+              <p>
+                Dari data penjualan tahun 2016 dan 2017, dapat dilihat bahwa
+                total penjualan untuk lokasi Manhattan adalah $13,7 juta pada
+                tahun 2016 dan $22,8 juta pada tahun 2017. Dengan
+                mempertimbangkan tren pertumbuhan penjualan dari tahun ke tahun,
+                target penjualan untuk tahun 2018 ditetapkan sebesar $27,3 juta.
+              </p>
+              <br />
+              <p>
+                Ini menunjukkan bahwa target penjualan untuk tahun 2018
+                mengalami peningkatan sebesar $4,5 juta dari tahun sebelumnya
+                (2017), yang mencerminkan pertumbuhan yang diharapkan dalam
+                bisnis. Hal ini menandakan bahwa manajemen memiliki harapan
+                optimis terhadap pertumbuhan penjualan di lokasi Manhattan pada
+                tahun 2018.
+              </p>
+            </div>
+            <div class="div2">
+              <h2>TREND SALES 2016-2017</h2>
+              <canvas id="trendSales"></canvas>
+            </div>
+            <div class="div3">
+              <h2>SALES TARGET 2018</h2>
+              <canvas id="salesTarget"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer-card></footer-card>
+    <!-- END MAIN CONTENT -->
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/sales.js"></script>
+    <!-- Component -->
+    <script src="Component/navbar.js"></script>
+    <script src="Component/hero.js"></script>
+    <script src="Component/footer.js"></script>
+  </body>
+</html>

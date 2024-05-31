@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <nav-card></nav-card>
+    <div class="form-container">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="question">Select a Question:</label>
+            <select id="question" name="question" required>
+                <option value="" disabled selected>Select your question</option>
+                <option value="question1">What is your return policy?</option>
+                <option value="question2">How do I track my order?</option>
+                <option value="question3">Can I purchase items again?</option>
+            </select>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details"></textarea>
+
+            <button type="submit">Submit Ticket</button>
+        </form>
+    </div>
+</div>
+    <footer-card></footer-card>
+
+    <script src="./js/contact.js"></script>
+    <script src="Component/navbar.js"></script>
+    <script src="Component/footer.js"></script>
+</body>
+</html>
