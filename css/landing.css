@@ -101,14 +101,14 @@
   );
 
   & h1 {
-    font-size: 250px;
+    font-size: 15rem;
     text-align: center;
     font-weight: 900;
     font-stretch: expanded;
     letter-spacing: -5px;
     line-height: 250px;
 
-    background-image: url("https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg");
+    background-image: url("../assets/images/location/location_h1.jpg");
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
