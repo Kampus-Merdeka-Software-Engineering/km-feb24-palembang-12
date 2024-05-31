@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location</title>
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/location.css">
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <div class="header">
-        <h1>Chania</h1>
-      </div>
-      
+      <!-- navbar -->
+      <nav-card></nav-card>
+      <!-- hero -->
+      <hero-card>
+        <div slot="page">Location</div>
+        <div slot="title">Find Properties in These City</div>
+      </hero-card>
+
       <div class="container">
       <div class="row">
       <div class="col-4">
@@ -74,5 +83,9 @@
             <div class="col-4"></div>
             </div>
             </div>
+            <footer-card></footer-card>
+            <script src="Component/navbar.js"></script>
+            <script src="Component/hero.js"></script>
+            <script src="Component/footer.js"></script>
 </body>
 </html>

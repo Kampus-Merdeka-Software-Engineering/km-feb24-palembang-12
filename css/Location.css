@@ -8,11 +8,6 @@
     padding: 10px;
   }
   
-  .header {
-    border: 1px solid red;
-    padding: 15px;
-  }
-  
   .row::after {
     content: "";
     clear: both;
@@ -22,7 +17,6 @@
   [class*="col-"] {
     float: left;
     padding: 15px;
-    border: 1px solid red;
   }
   
   .col-1 {width: 8.33%;}
@@ -42,8 +36,7 @@
 
   .card {
     text-align: center; 
-    max-width: 100%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 100%;  
     border-radius: 8px; 
     padding: 16px; 
     background-color: #fff; 
