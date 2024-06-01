@@ -84,7 +84,7 @@ navbarTemplate.innerHTML = `
                     <li><a href="location.html">Location</a></li>
                     <li><a href="buildingType.html">Building Type</a></li>
                     <li><a href="sales.html">Sales</a></li>
-                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="team.html">Our Team</a></li>
                 </ul>
                 <button class="button" id="contactUs">Contact Us</button>
                 </div>
