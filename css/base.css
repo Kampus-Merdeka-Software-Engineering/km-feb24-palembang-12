@@ -54,3 +54,9 @@ section header {
 #teamButton {
   cursor: pointer;
 }
+
+@media (max-width: 880px) {
+  body{
+    padding-inline: 0;
+  }
+}
