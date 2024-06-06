@@ -75,13 +75,15 @@ navbarTemplate.innerHTML = `
     /* Responsive styles */
     @media (max-width: 768px) {
       .navbar {
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
       }
 
       .navbar ul {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 95%;
       }
 
       .navbar ul li {
@@ -97,6 +99,10 @@ navbarTemplate.innerHTML = `
       }
 
       .menu-toggle {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        transform: translateY(-50%);
         display: block;
         cursor: pointer;
       }
