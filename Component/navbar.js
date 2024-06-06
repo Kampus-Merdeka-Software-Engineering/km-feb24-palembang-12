@@ -131,7 +131,6 @@ navbarTemplate.innerHTML = `
                     <li><a href="sales.html">Sales</a></li>
                     <li><a href="team.html">Our Team</a></li>
                 </ul>
-                <button class="button" id="contactUs">Contact Us</button>
                 </div>
             </div>
         </nav>
@@ -144,11 +143,6 @@ class Navbar extends HTMLElement {
   
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
-  
-      const contact = shadowRoot.getElementById('contactUs');
-      contact.addEventListener('click', function() {
-        window.location.href = 'contact.html';
-      });
   
       const mobileMenu = shadowRoot.getElementById('mobile-menu');
       const navbar = shadowRoot.querySelector('.navbar');
