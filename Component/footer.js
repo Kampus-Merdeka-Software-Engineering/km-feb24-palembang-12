@@ -298,9 +298,9 @@ footerTemplate.innerHTML = `
 
                 <a href="sales.html">Sales</a>
 
-                <a href="#">Our Team</a>
+                <a href="team.html">Our Team</a>
 
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
             </p>
 
             <p class="footer-company-name">Team 12 | Sec.Palembang © 2024</p>

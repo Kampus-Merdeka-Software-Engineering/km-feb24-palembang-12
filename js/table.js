@@ -7,19 +7,14 @@ fetch("../data/totalUnits_avgPrice.json")
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
 
-    const locations = data.map((item) => item.LOCATION);
-    const buildingType = data.map((item) => item["BUILDING TYPE"]);
-    const avgSalesPrice = data.map((item) => Number(item["AVERAGE SALES PRICE"]).toFixed(2));
-    const totalUnits = data.map((item) => item["TOTAL UNITS"]);
     const totalUnitsAvg = document.getElementById("totalUnitsAvg");
     
     if (totalUnitsAvg) {
       const tableData = data.map((item) => [
         item.LOCATION,
         item["BUILDING TYPE"],
-        item["AVERAGE SALES PRICE"],
+        Number(item["AVERAGE SALES PRICE"]).toFixed(0),
         item["TOTAL UNITS"],
       ]);
 
@@ -50,12 +45,7 @@ fetch("../data/totalUnits_price.json")
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
 
-    const locations = data.map((item) => item.LOCATION);
-    const buildingType = data.map((item) => item["BUILDING TYPE"]);
-    const priceRange = data.map((item) => item["PRICE RANGE CATEGORY"]);
-    const unitPrice = data.map((item) => item["UNIT PRACE RANGE"]);
     const totalUnitsPrice = document.getElementById("totalUnitsPrice");
     
     if (totalUnitsPrice) {
@@ -63,7 +53,7 @@ fetch("../data/totalUnits_price.json")
         item.LOCATION,
         item["BUILDING TYPE"],
         item["PRICE RANGE CATEGORY"],
-        item["UNIT PRACE RANGE"],
+        formatNumber(item["UNIT PRACE RANGE"].toString()),
       ]);
 
       const table = $(totalUnitsPrice).DataTable({
@@ -95,11 +85,6 @@ fetch("../data/unit_by_buildType.json")
   .then((data) => {
     // console.log(data);
 
-    const locations = data.map((item) => item.LOCATION);
-    const buildingType = data.map((item) => item["BUILDING TYPE"]);
-    const squareFeet = data.map((item) => item["LAND SQUARE FEET CATEGORY"]);
-    const avgSalesPrice = data.map((item) => Number(item["AVERAGE SALES PRICE"]).toFixed(2));
-    const totalUnits = data.map((item) => item["TOTAL UNITS"]);
     const unitBuildType = document.getElementById("unitBuildType");
     
     if (unitBuildType) {
@@ -108,7 +93,7 @@ fetch("../data/unit_by_buildType.json")
         item["BUILDING TYPE"],
         item["LAND SQUARE FEET CATEGORY"],
         item["AVERAGE SALES PRICE"],
-        item["TOTAL UNITS"],
+        formatNumber(item["TOTAL UNITS"].toString()),
       ]);
 
       const table = $(unitBuildType).DataTable({
@@ -128,3 +113,8 @@ fetch("../data/unit_by_buildType.json")
   .catch((error) => {
     console.error("Fetch error:", error);
   });
+
+  function formatNumber(text) {
+    const replaceString = /["'\\]/g;
+    return text.replace(replaceString, '')
+  }

@@ -32,6 +32,13 @@
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 
+  /* For mobile phones */
+@media only screen and (max-width: 768px) {
+  .col-4 {
+    width: 100%;
+  }
+}
+
   /* end layout section */
 
   .card {
@@ -39,7 +46,6 @@
     max-width: 100%;  
     border-radius: 8px; 
     padding: 16px; 
-    background-color: #fff; 
 }
 
 .card img {

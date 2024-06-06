@@ -2,7 +2,7 @@ const navbarTemplate = document.createElement("template");
 navbarTemplate.innerHTML = `
     <style>
     /* navbar section */
-    section{
+    section {
         margin-block: 50px;
     }
     .navbar {
@@ -70,8 +70,56 @@ navbarTemplate.innerHTML = `
         background-color: #ccc;
     }
         
-        /* end navbar section */
+    /* end navbar section */
     
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 95%;
+      }
+
+      .navbar ul li {
+        width: 100%;
+      }
+
+      .navbar ul li + li {
+        margin-left: 0;
+      }
+
+      .navbar.active ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        transform: translateY(-50%);
+        display: block;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        margin-left:15px;
+        background-color: #333;
+      }
+      #contactUs{
+        display: none;
+      }
+    }
+
     </style>
 
     <section>
@@ -79,12 +127,18 @@ navbarTemplate.innerHTML = `
             <div class="navbarContainer">
                 <div class="navbar">
                 <div class="logo"><i class="fas fa-water"></i>NYC</div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="location.html">Location</a></li>
                     <li><a href="buildingType.html">Building Type</a></li>
                     <li><a href="sales.html">Sales</a></li>
-                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="table.html">Data Table</a></li>
+                    <li><a href="team.html">Our Team</a></li>
                 </ul>
                 <button class="button" id="contactUs">Contact Us</button>
                 </div>
@@ -94,15 +148,18 @@ navbarTemplate.innerHTML = `
 `;
 
 class Navbar extends HTMLElement {
-  constructor() {
-    super();
-
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
-
-    const contact = shadowRoot.getElementById('contactUs');
-    contact.addEventListener('click', function() {
-    window.location.href = 'contact.html';})
-  }
+    constructor() {
+      super();
+  
+      const shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
+  
+      const mobileMenu = shadowRoot.getElementById('mobile-menu');
+      const navbar = shadowRoot.querySelector('.navbar');
+  
+      mobileMenu.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+      });
+    }
 }
 window.customElements.define("nav-card", Navbar);

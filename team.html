@@ -1,11 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/team.css">
+
+    <!-- Boxicon CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     
-</body>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav-card></nav-card>
+
+    <!-- hero -->
+    <hero-card>
+      <div slot="page">Our Team</div>
+      <div slot="title">Meet Our Team</div>
+    </hero-card>
+    <main>
+      <section>
+        <div class="team-group">
+          <div class="team-lead">
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">I Putu Agus Putra Negara</span>
+              <span slot="role">(Team Leader)</span>
+            </team-card>
+          </div>
+          <div class="team-fe">
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Budi Holfrid Manurung</span>
+              <span slot="role">(Frontend Developer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Devi Ocatviane</span>
+              <span slot="role">(Frontend Developer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Niken Christy Aurawidhar</span>
+              <span slot="role">(Frontend Developer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Nisrina Putri Adila</span>
+              <span slot="role">(Frontend Developer)</span>
+            </team-card>
+          </div>
+          <div class="team-ds">
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Adelia Dwi Pramudytha</span>
+              <span slot="role">(UI/UX Designer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Annisa Destriyana</span>
+              <span slot="role">(UI/UX Designer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Grace Yuli Malau</span>
+              <span slot="role">(UI/UX Designer)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Yorissa Silviana</span>
+              <span slot="role">(UI/UX Designer)</span>
+            </team-card>
+          </div>
+          <div class="team-qa">
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Daud Jeremiah Oscar S.</span>
+              <span slot="role">(Quality Assurance)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Muhammad Rifki</span>
+              <span slot="role">(Quality Assurance)</span>
+            </team-card>
+            <team-card image="https://www.shutterstock.com/image-photo/profile-picture-smiling-young-african-260nw-1873784920.jpg">
+              <span slot="name">Valyapatra Mawar Aulia</span>
+              <span slot="role">(Quality Assurance)</span>
+            </team-card>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer-card></footer-card>
+
+    <!-- Javascript -->
+
+    <!-- Component -->
+    <script src="Component/hero.js"></script>
+    <script src="Component/navbar.js"></script>
+    <script src="Component/footer.js"></script>
+    <script src="Component/team.js"></script>
+  </body>
 </html>
