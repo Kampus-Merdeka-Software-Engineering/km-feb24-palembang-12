@@ -45,3 +45,9 @@ fetch("../data/residential_commercial_unit.json")
       },
     });
   });
+
+  // link to team section
+const button = document.getElementById('tableSales');
+button.addEventListener('click', function() {
+    window.location.href = 'table.html';
+});
