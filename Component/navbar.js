@@ -115,6 +115,9 @@ navbarTemplate.innerHTML = `
         margin-left:15px;
         background-color: #333;
       }
+      #contactUs{
+        display: none;
+      }
     }
 
     </style>
@@ -137,6 +140,7 @@ navbarTemplate.innerHTML = `
                     <li><a href="table.html">Data Table</a></li>
                     <li><a href="team.html">Our Team</a></li>
                 </ul>
+                <button class="button" id="contactUs">Contact Us</button>
                 </div>
             </div>
         </nav>
