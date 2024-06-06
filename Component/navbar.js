@@ -2,7 +2,7 @@ const navbarTemplate = document.createElement("template");
 navbarTemplate.innerHTML = `
     <style>
     /* navbar section */
-    section{
+    section {
         margin-block: 50px;
     }
     .navbar {
@@ -107,6 +107,7 @@ navbarTemplate.innerHTML = `
         width: 25px;
         height: 3px;
         margin-bottom: 5px;
+        margin-left:15px;
         background-color: #333;
       }
     }
@@ -118,6 +119,11 @@ navbarTemplate.innerHTML = `
             <div class="navbarContainer">
                 <div class="navbar">
                 <div class="logo"><i class="fas fa-water"></i>NYC</div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="location.html">Location</a></li>
@@ -133,15 +139,23 @@ navbarTemplate.innerHTML = `
 `;
 
 class Navbar extends HTMLElement {
-  constructor() {
-    super();
-
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
-
-    const contact = shadowRoot.getElementById('contactUs');
-    contact.addEventListener('click', function() {
-    window.location.href = 'contact.html';})
-  }
+    constructor() {
+      super();
+  
+      const shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(navbarTemplate.content.cloneNode(true));
+  
+      const contact = shadowRoot.getElementById('contactUs');
+      contact.addEventListener('click', function() {
+        window.location.href = 'contact.html';
+      });
+  
+      const mobileMenu = shadowRoot.getElementById('mobile-menu');
+      const navbar = shadowRoot.querySelector('.navbar');
+  
+      mobileMenu.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+      });
+    }
 }
 window.customElements.define("nav-card", Navbar);
