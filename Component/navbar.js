@@ -75,8 +75,7 @@ navbarTemplate.innerHTML = `
     /* Responsive styles */
     @media (max-width: 768px) {
       .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       .navbar ul {
