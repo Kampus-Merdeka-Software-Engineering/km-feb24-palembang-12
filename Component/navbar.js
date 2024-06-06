@@ -70,8 +70,47 @@ navbarTemplate.innerHTML = `
         background-color: #ccc;
     }
         
-        /* end navbar section */
+    /* end navbar section */
     
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .navbar ul li {
+        width: 100%;
+      }
+
+      .navbar ul li + li {
+        margin-left: 0;
+      }
+
+      .navbar.active ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #333;
+      }
+    }
+
     </style>
 
     <section>

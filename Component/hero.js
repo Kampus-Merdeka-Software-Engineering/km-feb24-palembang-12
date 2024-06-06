@@ -71,6 +71,29 @@ heroTemplate.innerHTML = `
     .contact .button:hover {
       background-color: #ccc;
     }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .hero-content h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+
   </style>
 
   <section id="hero">
