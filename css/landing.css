@@ -220,14 +220,11 @@
 /* end location Section */
 
 /* Building Type Section */
-/* .building {
-    display: flex;
-    flex-direction: column;
-  } */
 .building-group {
   min-height: 150px;
-  max-height: 600px;
+  /* max-height: 600px; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   margin: 0 auto;
@@ -269,6 +266,7 @@
   align-items: center;
   margin-inline: 0;
   padding-inline: 0;
+  
 
   & button {
     padding: 15px 20px;
@@ -348,20 +346,11 @@
   grid-column: 3;
 }
 
-@media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
 
   .sales-description,
   .sales-chart {
     grid-column: auto;
   }
-
-  .sales-description {
-    grid-row: 1;
-  }
-
 }
 
 /* end sales section */
@@ -552,3 +541,9 @@
   }
 
 /* end ourteam section */
+
+@media screen and (max-width: 1200px) {
+  .btn-wrapper{
+    display: none;
+  }
+}
