@@ -62,7 +62,7 @@ fetch("../data/totalUnits_price.json")
           { title: "Location" },
           { title: "Building Type" },
           { title: "Price Range Category" },
-          { title: "Unit Price Range" }
+          { title: "Total Units" }
         ]
       });
     } else {

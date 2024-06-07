@@ -11,9 +11,10 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: red !important;
-  }
+  /* tr:nth-child(even) {
+    background-color: #f9f9f9 !important;
+  } */
 
-  
-  
+  table.dataTable thead th{
+    background-color: #3F72AF !important;
+  }
