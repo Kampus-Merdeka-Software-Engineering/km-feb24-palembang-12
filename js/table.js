@@ -14,7 +14,7 @@ fetch("../data/totalUnits_avgPrice.json")
       const tableData = data.map((item) => [
         item.LOCATION,
         item["BUILDING TYPE"],
-        Number(item["AVERAGE SALES PRICE"]).toFixed(0),
+        `$${Number(item["AVERAGE SALES PRICE"]).toFixed(0)}`,
         item["TOTAL UNITS"],
       ]);
 
