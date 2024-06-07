@@ -62,7 +62,7 @@ fetch("../data/totalUnits_price.json")
           { title: "Location" },
           { title: "Building Type" },
           { title: "Price Range Category" },
-          { title: "Unit Price Range" }
+          { title: "Total Units" }
         ]
       });
     } else {
@@ -92,9 +92,11 @@ fetch("../data/unit_by_buildType.json")
         item.LOCATION,
         item["BUILDING TYPE"],
         item["LAND SQUARE FEET CATEGORY"],
-        item["AVERAGE SALES PRICE"],
-        formatNumber(item["TOTAL UNITS"].toString()),
+        formatNumber(item["AVERAGE SALES PRICE"]),
+        parseInt(formatNumber(item["TOTAL UNITS"].toString())).toFixed(0),
       ]);
+
+      console.log(typeof(tableData[0][4]))
 
       const table = $(unitBuildType).DataTable({
         data: tableData,
