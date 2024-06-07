@@ -11,28 +11,21 @@ roomTemplate.innerHTML = `
             position: relative;
             background-color: #fff;
             width: 100%;
-            height: 350px;
+            height: 100%;
             background-color: white;
             transition: all .3s ease-in-out;
-            display: flex;
-
+            aspect-ratio: 1/1;
+            
             &:hover{
               transform: scale(1.05);
               cursor: pointer;
             }
-            
-            .img-wrapper{
-              display: flex;
-              width: 100%;
-              height: 80%;
-              overflow: hidden;
-              border-radius: inherit;
-            }
         }
-        
         
         img{
             width: 100%;
+            height: 80%;
+            border-radius: inherit;
         }
         .card .label-wrapper{
             display: flex;
@@ -94,9 +87,7 @@ roomTemplate.innerHTML = `
           }
     </style>
     <div class="card">
-        <div class="img-wrapper">
-          <img alt="property image"/>
-        </div>
+        <img alt="property image"/>
 
         <div class="label-wrapper">
             <div class="label sale">FOR SALE</div>
@@ -126,6 +117,7 @@ roomTemplate.innerHTML = `
                     <slot name="sqrfeet-total" />0
                   </div>
                 </div>
+                
             </div>
         </div>
     </div>
