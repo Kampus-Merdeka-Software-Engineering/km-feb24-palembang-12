@@ -92,7 +92,7 @@ fetch("../data/unit_by_buildType.json")
         item.LOCATION,
         item["BUILDING TYPE"],
         item["LAND SQUARE FEET CATEGORY"],
-        item["AVERAGE SALES PRICE"],
+        formatNumber(item["AVERAGE SALES PRICE"]),
         formatNumber(item["TOTAL UNITS"].toString()),
       ]);
 
