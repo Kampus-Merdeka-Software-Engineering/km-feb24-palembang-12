@@ -93,7 +93,7 @@ fetch("../data/unit_by_buildType.json")
         item["BUILDING TYPE"],
         item["LAND SQUARE FEET CATEGORY"],
         formatNumber(item["AVERAGE SALES PRICE"]),
-        formatNumber(item["TOTAL UNITS"].toString()),
+        parseInt(formatNumber(item["TOTAL UNITS"].toString())).toFixed(0),
       ]);
 
       const table = $(unitBuildType).DataTable({
