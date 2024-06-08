@@ -95,7 +95,7 @@
     position: absolute;
     z-index: 99;
     font-weight: 900;
-    font-size: clamp(3.5rem, 8vw - 2rem, 5rem);
+    font-size: clamp(4rem, 8vw - 2rem, 5rem);
     transition: all .3s ease-in-out;
     cursor:pointer;
   }

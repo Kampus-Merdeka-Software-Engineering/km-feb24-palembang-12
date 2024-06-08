@@ -83,7 +83,6 @@ fetch("../data/unit_by_buildType.json")
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
 
     const unitBuildType = document.getElementById("unitBuildType");
     
