@@ -25,7 +25,12 @@ navbarTemplate.innerHTML = `
     .navbar .logo i {
         font-family: Poppins, sans-serif;
         font-size: 28px;
-        margin-right: 10px;
+        
+    }
+    .navbar .nav-group{
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
     }
         
     .navbar ul {
@@ -33,7 +38,7 @@ navbarTemplate.innerHTML = `
         display: flex;
         margin: 0;
         padding: 10px 20px;
-        border-radius: inherit;
+        border-radius: 30px;
         background-color: #fff;
     }
         
@@ -132,14 +137,16 @@ navbarTemplate.innerHTML = `
                     <span></span>
                     <span></span>
                 </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="location.html">Location</a></li>
-                    <li><a href="buildingType.html">Building Type</a></li>
-                    <li><a href="sales.html">Sales</a></li>
-                    <li><a href="table.html">Data Table</a></li>
-                    <li><a href="team.html">Our Team</a></li>
-                </ul>
+                <div class="nav-group">
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="location.html">Location</a></li>
+                      <li><a href="buildingType.html">Building Type</a></li>
+                      <li><a href="sales.html">Sales</a></li>
+                      <li><a href="table.html">Data Table</a></li>
+                      <li><a href="team.html">Our Team</a></li>
+                  </ul>
+                </div>
                 <button class="button" id="contactUs">Contact Us</button>
                 </div>
             </div>
@@ -159,6 +166,10 @@ class Navbar extends HTMLElement {
   
       mobileMenu.addEventListener('click', function() {
         navbar.classList.toggle('active');
+      });
+      const contactUsButton = shadowRoot.getElementById('contactUs');
+      contactUsButton.addEventListener('click', function() {
+        window.location.href = 'contact.html';
       });
     }
 }

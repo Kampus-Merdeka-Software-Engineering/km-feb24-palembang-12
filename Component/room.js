@@ -14,13 +14,13 @@ roomTemplate.innerHTML = `
             height: 100%;
             background-color: white;
             transition: all .3s ease-in-out;
-
+            aspect-ratio: 1/1;
+            
             &:hover{
               transform: scale(1.05);
               cursor: pointer;
             }
         }
-        
         
         img{
             width: 100%;

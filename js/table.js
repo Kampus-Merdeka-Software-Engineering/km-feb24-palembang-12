@@ -14,7 +14,7 @@ fetch("../data/totalUnits_avgPrice.json")
       const tableData = data.map((item) => [
         item.LOCATION,
         item["BUILDING TYPE"],
-        Number(item["AVERAGE SALES PRICE"]).toFixed(0),
+        `$${Number(item["AVERAGE SALES PRICE"]).toFixed(0)}`,
         item["TOTAL UNITS"],
       ]);
 
@@ -62,7 +62,7 @@ fetch("../data/totalUnits_price.json")
           { title: "Location" },
           { title: "Building Type" },
           { title: "Price Range Category" },
-          { title: "Unit Price Range" }
+          { title: "Total Units" }
         ]
       });
     } else {
@@ -83,7 +83,6 @@ fetch("../data/unit_by_buildType.json")
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
 
     const unitBuildType = document.getElementById("unitBuildType");
     
@@ -92,8 +91,8 @@ fetch("../data/unit_by_buildType.json")
         item.LOCATION,
         item["BUILDING TYPE"],
         item["LAND SQUARE FEET CATEGORY"],
-        item["AVERAGE SALES PRICE"],
-        formatNumber(item["TOTAL UNITS"].toString()),
+        formatNumber(item["AVERAGE SALES PRICE"]),
+        parseInt(formatNumber(item["TOTAL UNITS"].toString())).toFixed(0),
       ]);
 
       const table = $(unitBuildType).DataTable({

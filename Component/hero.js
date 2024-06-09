@@ -72,11 +72,12 @@ heroTemplate.innerHTML = `
       background-color: #ccc;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 880px) {
       .hero {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
+        border-radius: 0;
       }
 
       .hero-image {
@@ -107,7 +108,7 @@ heroTemplate.innerHTML = `
       </div>
     </div>
     <div class="hero-image">
-      <img src="../assets/images/hero-logo.png" />
+      <img src="./assets/images/hero-logo.png" />
     </div>
   </div>
   </section>

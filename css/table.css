@@ -10,7 +10,7 @@ table {
     text-align: center;
     padding: 8px;
   }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
+
+  table.dataTable thead th{
+    background-color: #DBE2EF !important;
   }

@@ -7,12 +7,11 @@ fetch("../data/trend_sales_2016-2017.json")
     return response.json();
   })
   .then((data) => {
-    console.log(data);
     const trend = document.getElementById("trendSales");
     const month = data.map((item) => item.SALE_DATE);
     const unit = data.map((item) => item.Total_Units);
     const sales = data.map((item) => item.Total_Sale_Price);
-    console.log(sales);
+    
     new Chart(trend, {
       type: "line",
       data: {
@@ -92,7 +91,6 @@ fetch("../data/sales_target_2018.json")
     return response.json();
   })
   .then((data) => {
-    // console.log(data);
     const locations = data.map((item) => item.LOCATION);
     const totalSales2016 = data.map((item) => item["TOTAL_SALES_2016"]);
     const totalSales2017 = data.map((item) => item["TOTAL_SALES_2017"]);
