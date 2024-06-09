@@ -167,6 +167,10 @@ class Navbar extends HTMLElement {
       mobileMenu.addEventListener('click', function() {
         navbar.classList.toggle('active');
       });
+      const contactUsButton = shadowRoot.getElementById('contactUs');
+      contactUsButton.addEventListener('click', function() {
+        window.location.href = 'contact.html';
+      });
     }
 }
 window.customElements.define("nav-card", Navbar);
