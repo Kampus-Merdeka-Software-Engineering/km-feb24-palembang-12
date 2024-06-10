@@ -122,3 +122,11 @@ const sales = document.getElementById('sales-learnMore');
 sales.addEventListener('click', function() {
     window.location.href = 'sales.html';
 });
+
+const borough = document.querySelectorAll('.location-item')
+borough.forEach(item => {
+    item.addEventListener("click", ()=>{
+        const target = item.querySelector('h1').textContent.toLocaleLowerCase()
+        window.location.href = `location.html#${target}`
+    })
+});
