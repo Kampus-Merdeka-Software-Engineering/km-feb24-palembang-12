@@ -20,6 +20,7 @@ function updateStats() {
     // default data
     const data = {
         avgPrice: buildingData.reduce((acc, item) => acc + item.AVERAGE_SALES_PRICE, 0),
+        sales2016: salesData.reduce((acc, item) => acc + item.TOTAL_SALES_2016, 0),
         sales2017: salesData.reduce((acc, item) => acc + item.TOTAL_SALES_2017, 0),
         target2018: salesData.reduce((acc, item) => acc + item.SALES_TARGET_2018, 0),
         totalUnits: buildingData.reduce((acc, item) => acc + item.TOTAL_UNITS, 0)
@@ -46,12 +47,15 @@ function updateStats() {
 }
 
 function salesDisplay(){
-    const data = salesData;
-    const manhattanData = data.find(item => item.LOCATION === "Manhattan");
-    if (manhattanData) {
-        document.getElementById('total_sales_2016').textContent = `$${currencyFormatted(manhattanData.TOTAL_SALES_2016)}`;
-        document.getElementById('total_sales_2017').textContent = `$${currencyFormatted(manhattanData.TOTAL_SALES_2017)}`;
-        document.getElementById('sales_target_2018').textContent = `$${currencyFormatted(manhattanData.SALES_TARGET_2018)}`;
+    const sales = {
+        sales2016: salesData.reduce((acc, item) => acc + item.TOTAL_SALES_2016, 0),
+        sales2017: salesData.reduce((acc, item) => acc + item.TOTAL_SALES_2017, 0),
+        target2018: salesData.reduce((acc, item) => acc + item.SALES_TARGET_2018, 0),
+    }
+    if (sales) {
+        document.getElementById('total_sales_2016').textContent = `$${currencyFormatted(sales.sales2016)}`;
+        document.getElementById('total_sales_2017').textContent = `$${currencyFormatted(sales.sales2017)}`;
+        document.getElementById('sales_target_2018').textContent = `$${currencyFormatted(sales.target2018)}`;
     } else {
         console.error('Data untuk Manhattan tidak ditemukan');
     }
