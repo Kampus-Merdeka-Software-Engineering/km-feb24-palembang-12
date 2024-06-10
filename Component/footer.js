@@ -2,7 +2,10 @@ const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
     <style>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css');
-
+    
+    footer a:hover{
+      text-decoration: underline !important;
+    }
     .footer-distributed {
         background: var(--tertiary-color);
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

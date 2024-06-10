@@ -23,6 +23,11 @@
   font-weight: semi-bold;
   font-size: 28px;
   font-family: Poppins, sans-serif;
+
+  &:hover{
+    cursor: pointer;
+    background-color: #dadee7;
+  }
 }
 
 .stats-container {
@@ -144,6 +149,7 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+  
 }
 
 .location-item:nth-child(2) {
@@ -256,7 +262,6 @@
 
   &:hover{
     transform: scale(1.05);
-    cursor: pointer;
   }
 
   & .building-content {
@@ -307,7 +312,6 @@
 
   &:hover{
     transform: scale(1.05);
-    cursor: pointer;
   }
 }
 
