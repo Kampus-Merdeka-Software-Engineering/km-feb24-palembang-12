@@ -112,16 +112,6 @@ function checkDataLoaded() {
 document.getElementById('buildingTypeDropdown').addEventListener('change', updateStats);
 document.getElementById('locationDropdown').addEventListener('change', updateStats);
 
-// Link to team section
-const button = document.getElementById('teamButton');
-button.addEventListener('click', function() {
-    window.location.href = 'team.html';
-});
-
-const sales = document.getElementById('sales-learnMore');
-sales.addEventListener('click', function() {
-    window.location.href = 'sales.html';
-});
 
 const borough = document.querySelectorAll('.location-item')
 borough.forEach(item => {
@@ -130,3 +120,8 @@ borough.forEach(item => {
         window.location.href = `location.html#${target}`
     })
 });
+
+
+function directPage(page){
+    window.location.href = page +".html"
+}
