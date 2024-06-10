@@ -18,7 +18,6 @@ roomTemplate.innerHTML = `
             
             &:hover{
               transform: scale(1.05);
-              cursor: pointer;
             }
         }
         
