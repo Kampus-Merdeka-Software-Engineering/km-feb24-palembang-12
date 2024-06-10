@@ -32,16 +32,16 @@ function updateStats() {
         // Update display with filtered data
         document.getElementById('averageSalePrice').innerText = `$${parseFloat(building.AVERAGE_SALES_PRICE.toFixed(0)).toLocaleString()}`;
         document.getElementById('totalUnits').innerText = building.TOTAL_UNITS.toLocaleString();
-        document.getElementById('totalSales2017').innerText = `$${formatNumber(sales.TOTAL_SALES_2017)} M`;
-        document.getElementById('totalSales2018').innerText = `$${formatNumber(sales.SALES_TARGET_2018)} M`;
+        document.getElementById('totalSales2017').innerText = `$${currencyFormatted(sales.TOTAL_SALES_2017)}`;
+        document.getElementById('totalSales2018').innerText = `$${currencyFormatted(sales.SALES_TARGET_2018)}`;
     } else {
         
         // Reset display to default sums
         const avgPrice = data.avgPrice / buildingData.length;
         document.getElementById('averageSalePrice').innerText = `$${avgPrice.toFixed(0).toLocaleString()}`;
         document.getElementById('totalUnits').innerText = data.totalUnits.toLocaleString();
-        document.getElementById('totalSales2017').innerText = `$${formatNumber(data.sales2017)} M`;
-        document.getElementById('totalSales2018').innerText = `$${formatNumber(data.target2018)} M`;
+        document.getElementById('totalSales2017').innerText = `$${currencyFormatted(data.sales2017)}`;
+        document.getElementById('totalSales2018').innerText = `$${currencyFormatted(data.target2018)}`;
     }
 }
 
@@ -49,19 +49,21 @@ function salesDisplay(){
     const data = salesData;
     const manhattanData = data.find(item => item.LOCATION === "Manhattan");
     if (manhattanData) {
-        document.getElementById('total_sales_2016').textContent = `$${formatNumber(manhattanData.TOTAL_SALES_2016)} M`;
-        document.getElementById('total_sales_2017').textContent = `$${formatNumber(manhattanData.TOTAL_SALES_2017)} M`;
-        document.getElementById('sales_target_2018').textContent = `$${formatNumber(manhattanData.SALES_TARGET_2018)} M`;
+        document.getElementById('total_sales_2016').textContent = `$${currencyFormatted(manhattanData.TOTAL_SALES_2016)}`;
+        document.getElementById('total_sales_2017').textContent = `$${currencyFormatted(manhattanData.TOTAL_SALES_2017)}`;
+        document.getElementById('sales_target_2018').textContent = `$${currencyFormatted(manhattanData.SALES_TARGET_2018)}`;
     } else {
         console.error('Data untuk Manhattan tidak ditemukan');
     }
 }
 
-function formatNumber(num) {
-    const million = num / 1000000;
-    const formattedNumber = million.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    return formattedNumber;
+const currencyFormatted = (num) => {
+    return Intl.NumberFormat("en-US", { 
+        notation: "compact",
+        maximumFractionDigits: 1,
+    }).format(num);
 }
+
 
 // Fetch sales data
 fetch("../data/sales_target_2018.json")
